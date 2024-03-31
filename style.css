@@ -6,25 +6,25 @@
 
 body {
   margin: 0 auto;
-  font-family: "Zen Kaku Gothic New", "Antonio", "Cabin Condensed", sans-serif;
+  font-family: "Zen Kaku Gothic New", "Antonio", "Khula", sans-serif;
 }
 
 header {
   position: absolute;
-  top: 50px;
+  top: 30px;
   width: 100%;
   height: auto;
   z-index: 10;
   nav {
     position: absolute;
-    width: 64px;
+    width: 48px;
     height: 16px;
-    right: 80px;
+    right: 24px;
     div {
-      width: 64px;
-      height: 2px;
+      width: 48px;
+      height: 1px;
       background-color: #fff;
-      margin-bottom: 16px;
+      margin-bottom: 8px;
     }
   }
 }
@@ -32,9 +32,10 @@ header {
 .main-view {
   position: relative;
   width: 100%;
-  height: 860px;
+  height: 100vh;
   z-index: 0;
   overflow: hidden;
+  padding: 0 24px;
 }
 
 .main-view::before {
@@ -57,8 +58,8 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 300px;
-  height: 485px;
+  width: 240px;
+  height: 388px;
 }
 
 .swiper-slide {
@@ -68,29 +69,34 @@ header {
 }
 
 .swiper-slide img {
+  width: 100%;
+  height: auto;
   object-fit: cover;
+  object-position: center;
 }
 
-.text-container {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
+.main-view__ttl {
+  position: relative;
+  font-family: "Antonio";
+  font-size: 3.5rem; /*56px*/
   color: #fff;
-  z-index: 3;
-  h1 {
-    font-family: Antonio;
-    font-size: 64px;
-    letter-spacing: 1.2rem;
-    padding-top: 140px;
-    padding-left: 24px;
-  }
-  p {
-    font-family: "Zen Kaku Gothic New";
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 2;
-    margin-top: 492px;
-  }
+  text-align: center;
+  letter-spacing: 0.5rem;
+  text-indent: 0.5rem;
+  margin-top: 90px;
+  z-index: 2;
+}
+
+.main-view_txt {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  width: 300px;
+  transform: translateX(-50%);
+  font-family: "Zen Kaku Gothic New";
+  font-size: 0.875rem; /*14px*/
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  line-height: 2;
 }
