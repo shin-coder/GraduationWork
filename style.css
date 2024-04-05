@@ -9,6 +9,10 @@ body {
   font-family: "Zen Kaku Gothic New", "Antonio", "Khula", sans-serif;
 }
 
+h1, h2, h3, small, p, a {
+  color: #333;
+}
+
 header {
   position: absolute;
   top: 30px;
@@ -60,14 +64,13 @@ header {
   transform: translate(-50%, -50%);
   width: 240px;
   height: 388px;
+}
 
-  .swiper-slide {
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-  }
-  
-  .swiper-slide img {
+.slider1 .swiper-slide {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  img {
     width: 100%;
     height: auto;
     object-fit: cover;
@@ -111,6 +114,7 @@ header {
   text-align: right;
   font-family: "khula";
   font-size: 0.625rem; /*10px*/
+  font-weight: 300;
 }
 
 .philosophy__title {
@@ -123,7 +127,6 @@ header {
   width: 70px;
   height: 35px;
   margin-right: 8px;
-
   img {
     width: 100%;
     height: auto;
@@ -156,28 +159,43 @@ header {
   line-height: 2;
 }
 
-.philosophy__image-1 {
+.philosophy + div {
+  position: relative;
   width: 100%;
   height: auto;
   text-align: right;
   margin-top: 64px;
+  overflow: hidden;
+}
 
+.philosophy__image-1 {
+  display: inline-block;
+  width: 100%;
+  max-width: 625px;
+  height: 66vw;
+  overflow: hidden;
+  position: relative;
+  right: 0;
+  margin-left: 48px;
   img {
-    width: 327px;
+    width: 100%;
     height: auto;
   }
 }
 
-.image-wrapper {
+.image-wrapper--philosophy {
   margin-top: 40px;
+  padding: 0 24px;
   display: flex;
   gap: 16px;
   align-items: end;
 }
 
 .philosophy__image-2 {
-  width: 181px;
-
+  width: 48.3%;
+  max-width: 625px;
+  height: 35.2vw;
+  overflow: hidden;
   img {
     width: 100%;
     height: auto;
@@ -185,16 +203,18 @@ header {
 }
 
 .philosophy__image-3 {
-  width: 115px;
-
+  width: 31%;
+  max-width: 300px;
+  height: 25.3vw;
+  overflow: hidden;
   img {
     width: 100%;
     height: auto;
   }
 }
 
+
 .philosophy__copy {
-  margin-top: 16px;
   font-family: "Khula";
   font-weight: 300;
   font-size: 3rem;
@@ -205,9 +225,23 @@ header {
   overflow: hidden;
 }
 
+.product {
+  background: #f4f4f4;
+  padding: 80px 0;
+  margin-top: 80px;
+}
+
+.product h2 {
+  font-family: "Khula";
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
 .slider2 {
   width: 100%;
-  max-width: 390px; 
+  max-width: 100%;
   margin: 0 auto;
   overflow: hidden;
   position: relative;
@@ -215,26 +249,219 @@ header {
 
 .slider2 .swiper-slide {
   width: 200px;
-  height: 200px;
+  height: auto;
   text-align: center;
   opacity: .4;
   transition: opacity 0.3s;
-
-  img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover;
-  }
 }
 
 .slider2 .swiper-slide-active {
   opacity: 1;
 }
 
+.product__item {
+  height: auto;
+  text-align: center;
+}
+
+.product__image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.product__item .product__name {
+  margin: 8px 0 16px;
+  small {
+    font-family: "khula";
+    font-size: 0.625rem; /*10px*/
+  }
+  h3 {
+    font-family: "Zen Kaku Gothic New";
+    font-weight: 500;
+    font-size: 1rem;
+  }
+}
+
+.product__item button {
+  padding-bottom: 1rem;
+  a {
+    font-family: "khula";
+    font-size: 10px;
+    color: #fff;
+    font-weight: 400;
+    padding: 8px 20px;
+    background-color: #A1988B;
+    border-radius: 9999px;
+  }
+}
+
+.swiper-button-prev, .swiper-button-next {
+  position: absolute;
+  top: 40%;
+  color: #7C6957;
+  padding: 0 2em;
+  opacity: 1;
+}
+
+.swiper-button-prev::after, .swiper-button-next::after {
+  font-size: 24px;
+}
 
 .swiper-pagination {
   position: relative;
-  margin-top: 10px;
+  margin-top: 20px;
+}
+
+.swiper-pagination-bullet {
+  width: 5px;
+  height: 5px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #7C6957;
+}
+
+.about {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.image-wrapper--about {
+  display: flex;
+  justify-content: center;
+  margin-right: 126px;
+  gap: 58px;
+  .item1 {
+    order: 2;
+  }
+  .item1 img {
+    height: auto;
+
+    @media screen and (max-width: 600px) {
+      width: 100vw;
+      max-width: 625px;
+    }
+  }
+
+  .item2 {
+    order: 1;
+    align-self: flex-end;
+    margin-bottom: -60px;
+  }
+
+  .item3 {
+    order: 3;
+    margin-top: -60px;
+  }
+}
+
+.text-area {
+  padding: 0 24px;
+}
+
+.text-area small {
+  display: block;
+  text-align: right;
+  font-family: "Khula";
+  font-size: 0.625rem; /*10px*/
+  font-weight: 300;
+}
+
+.text-area h2 {
+  font-family: "Khula";
+  font-weight: 600;
+  font-size: 2rem;
+  span {
+    font-family: "Zen Kaku Gothic New";
+    font-size: 0.75rem; /*12px*/
+    font-weight: 500;
+  }
+}
+
+.text-area p {
+  margin-top: 40px;
+  font-family: "Zen Kaku Gothic New";
+  font-size: 0.875rem; /*14px*/
+  line-height: 2;
+}
+
+.text-area a {
+  display: block;
+  text-align: right;
+  margin-top: 24px;
+  font-family: "Zen Kaku Gothic New";
+  font-size: 0.875rem; /*14px*/
+  font-weight: 900;
+}
+
+.faq {
+  padding: 0 24px;
+  margin-top: 80px;
+}
+
+.faq h2 {
+  font-family: "Khula";
+  font-weight: 600;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.accordion__item {
+  border-top: 1px solid #999;
+  border-bottom: 1px solid #999;
+}
+
+.accordion__item + .accordion__item {
+  border-top: 0px;
+}
+
+.accordion__head {
+  position: relative;
+  padding: 16px 0;
+  width: 100%;
+  cursor: pointer;
+}
+
+.accordion__head p {
+  display: inline-block;
+  width: 220px;
+  font-family: "Zen Kaku Gothic New";
+  font-size: 0.875rem; /*14px*/
+  line-height: 2;
+}
+
+.accordion__head::after, .accordion__head::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  width: 12px;
+  height: 1px;
+  background-color: #333;
+  transition: .3s;
+}
+
+.accordion__head::before {
+  transform: translateY(-50%)rotate(90deg);
 }
 
 
+.accordion__item.active .accordion__head::before {
+  transform: translateY(-50%)rotate(0deg);
+}
+
+.accordion__body {
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: all .25s ease;
+}
+
+.accordion__item.active .accordion__body {
+  height: auto;
+  padding: 16px 0;
+}

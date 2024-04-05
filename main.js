@@ -1,3 +1,5 @@
+// Swiper実装
+
 const slider1 = new Swiper(".slider1", {
   loop: true, 
   parallax: true,
@@ -10,33 +12,48 @@ const slider1 = new Swiper(".slider1", {
 });
 
 const slider2 = new Swiper('.slider2', {
-  pagination: {
+  slidesPerView: 2,
+  spaceBetween: 16,
+  centeredSlides: true,
+  grabCursor: true,
+  loop: true,pagination: {
     el: ".swiper-pagination",
-    type: "fraction",
-    renderFraction: function (currentClass, totalClass) {
-      return '<span class="' + currentClass + '"></span>' +
-        '<span class="slider-fraction-separator">/</span>' +
-        '<span class="' + totalClass + '"></span>';
-    },
-    formatFractionCurrent: function (number) {
-      if (number === 1){
-        return 4;
-      } else {
-        return number - 1;
-      }
-    },
-    formatFractionTotal: function (number) {
-      return 4;
-    },
+    clickable: true,
   },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  slidesPerView: 'auto',
-  spaceBetween: 24,
-  centeredSlides: true,
-  initialSlide: 1, 
-  grabCursor: true,
-  loop: true,
+});
+
+//アコーディオンメニュー
+const accordionItem = document.getElementsByClassName('accordion__item');
+const accordionBtn = document.getElementsByClassName('accordion__head');
+
+for(let i = 0; i < accordionBtn.length; i++) {
+  accordionBtn[i].addEventListener('click', () => {
+    accordionItem[i].classList.toggle('active');
+  });
+}
+
+//パララックス
+const parallaxItems = gsap.utils.toArray('.js-parallax')
+parallaxItems.forEach((item) => {
+  gsap.fromTo(
+    item.querySelector('img'),
+    {
+      yPercent: 0,
+    }, 
+    {
+      yPercent: -20,
+      ease: 'none',
+      scrollTrigger: {
+        trigger: item,
+        start: 'top bottom',
+        end: 'bottom top',
+        scrub: 1,
+        markers: true,
+      },
+    }
+  );
 });
