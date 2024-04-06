@@ -27,6 +27,7 @@ const slider2 = new Swiper('.slider2', {
 });
 
 //アコーディオンメニュー
+
 const accordionItem = document.getElementsByClassName('accordion__item');
 const accordionBtn = document.getElementsByClassName('accordion__head');
 
@@ -37,6 +38,7 @@ for(let i = 0; i < accordionBtn.length; i++) {
 }
 
 //パララックス
+
 const parallaxItems = gsap.utils.toArray('.js-parallax')
 parallaxItems.forEach((item) => {
   gsap.fromTo(
@@ -45,12 +47,12 @@ parallaxItems.forEach((item) => {
       yPercent: 0,
     }, 
     {
-      yPercent: -20,
+      yPercent: -10,
       ease: 'none',
       scrollTrigger: {
         trigger: item,
-        start: 'top bottom',
-        end: 'bottom top',
+        start: 'top center',
+        end: 'center top',
         scrub: 1,
         markers: true,
       },
