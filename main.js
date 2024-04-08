@@ -54,8 +54,37 @@ parallaxItems.forEach((item) => {
         start: 'top center',
         end: 'center top',
         scrub: 1,
-        markers: true,
+        // markers: true,
       },
     }
   );
 });
+
+//マウスストーカー
+
+const aTags = document.querySelectorAll('a');
+const num = aTags.length - 1;
+const cursor = document.getElementById('js-cursor'); 
+const link = document.getElementsByTagName("a")[num];
+const area = document.querySelector('.js-area');
+
+area.addEventListener('mousemove', function (e) {
+  cursor.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
+  cursor.style.opacity = '0.8';
+});
+
+link.addEventListener('mouseenter', () => {
+  cursor.classList.add('js-hover');
+}, false);
+link.addEventListener('mouseleave', () => {
+  cursor.classList.remove('js-hover');
+}, false);
+
+area.addEventListener('mouseout', (e) => {
+  setTimeout(
+    (e) => {
+      cursor.style.opacity = '0';
+    }, 100);
+});
+
+

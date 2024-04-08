@@ -293,18 +293,6 @@ header {
   }
 }
 
-/* .swiper-button-prev, .swiper-button-next {
-  position: absolute;
-  top: 40%;
-  color: #7C6957;
-  padding: 0 2em;
-  opacity: 1;
-}
-
-.swiper-button-prev::after, .swiper-button-next::after {
-  font-size: 24px;
-} */
-
 .swiper-button-prev, .swiper-button-next {
   position: absolute;
   top: 25%;
@@ -347,7 +335,7 @@ header {
 .about {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 60px 0;
+  padding: 80px 0;
   overflow: hidden;
 }
 
@@ -421,7 +409,6 @@ header {
 
 .faq {
   padding: 0 24px;
-  margin-top: 80px;
 }
 
 .faq h2 {
@@ -486,4 +473,82 @@ header {
 .accordion__item.active .accordion__body {
   height: auto;
   padding: 16px 0;
+}
+
+.contact__area {
+  margin-top: 80px;
+}
+
+.contact__area a {
+  display: inline-block;
+  width: 100%;
+  height: 300px;
+  background-color: #e4dbce;
+  text-align: center;
+}
+
+#js-cursor{
+  pointer-events: none;
+  position: fixed;
+  top: -15px; 
+  left: -15px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #333;
+  border-radius: 50%;
+  transform: translate(0,0);
+  transition: width 0.3s ease-out, height 0.3s ease-out;
+  z-index: 10000;
+  opacity: 0;
+}
+
+#js-cursor.js-hover {
+  width: 90px;
+  height: 90px;
+}
+
+#js-cursor.js-hover::after {
+  content: 'GET IN TOCH';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #333;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.contact__text h2 {
+  margin-top: 64px;
+  font-family: "Kuhula";
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.contact__text h2::after {
+  content: '>';
+  font-family: "Khula";
+  font-size: 1.5rem;
+  color: #333;
+  margin-left: 8px;
+}
+
+.contact__text p {
+  font-family: "Zen Kaku Gothic New";
+  font-size: 0.875rem; /*14px*/
+  color: #333;
+  margin-top: 8px;
+}
+
+.contact__text small {
+  display: block;
+  font-family: "Zen Kaku Gothic New";
+  font-size: 0.75rem;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.contact__text small:first-of-type {
+  margin-top: 40px;
 }
