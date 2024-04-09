@@ -16,6 +16,11 @@ const slider2 = new Swiper('.slider2', {
   spaceBetween: 16,
   centeredSlides: true,
   grabCursor: true,
+  speed: 800, 
+  autoplay: { 
+    delay: 2000,
+    disableOnInteraction: false,
+  },
   loop: true,pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -62,10 +67,8 @@ parallaxItems.forEach((item) => {
 
 //マウスストーカー
 
-const aTags = document.querySelectorAll('a');
-const num = aTags.length - 1;
 const cursor = document.getElementById('js-cursor'); 
-const link = document.getElementsByTagName("a")[num];
+const link = document.getElementsByTagName("a")[6];
 const area = document.querySelector('.js-area');
 
 area.addEventListener('mousemove', function (e) {
