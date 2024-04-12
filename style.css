@@ -660,24 +660,29 @@ footer h1 {
 
 /* Aboutページ */
 
-.brand-story {
+.brand__story {
   padding: 0 24px;
   margin-top: 100px;
 }
 
-.brand-story h2 {
+.brand__story__title h2 {
+  display: inline-block;
+  text-align: right;
   font-family: "Khula";
   font-weight: 600;
   font-size: 2rem;
   line-height: 1;
-  span {
+}
+
+.brand__story__title span {
+    display: block;
     font-family: "Zen Kaku Gothic New";
     font-size: 0.75rem; /*12px*/
     font-weight: 500;
-  }
+    margin-top: 4px;
 }
 
-.brand-story p {
+.brand__story p {
   margin-top: 40px;
   font-family: "Zen Kaku Gothic New";
   font-size: 0.875rem; /*14px*/
@@ -716,4 +721,162 @@ footer h1 {
     width: 100%;
     height: auto;
   }
+}
+
+.flow__section {
+  position: relative;
+  width: 100%;
+  background-color: #333;
+  margin: 0 auto;
+  padding: 0 24px;
+  margin-top: 80px;
+  @media screen and (min-width: 1080px) {
+    padding: 0 80px;
+  }
+}
+
+.flow__section .bg__text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(90deg, #6c6c6c 0%, #fff 50%, #6c6c6c 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Antonio";
+  font-size: 5rem;
+  font-weight: bold;
+  letter-spacing: 2rem;
+  text-indent: 2rem;
+  opacity: .05;
+}
+
+.sticky-header {
+  position: relative;
+  width: 100%;
+  padding-top: 80px;
+  @media screen and (min-width: 1080px) {
+    position: sticky;
+    top: 104px;
+    left: 0;
+    z-index: 99;
+    padding-bottom: 200px;
+  }
+}
+
+.flow__title {
+  font-family: "Zen Kaku Gothic New";
+  font-size: 2rem;
+  color: #fff;
+  font-weight: bold;
+  @media screen and (min-width: 1080px) {
+    font-size: 24px;
+    position: sticky;
+    top: 80px;
+    left: 0;
+    font-size: 36px;
+  }
+}
+
+.flow__contents {
+  position: relative;
+  padding-bottom: 80px;
+  @media screen and (min-width: 1080px) {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 100px;
+  }
+  @media (min-width: 1440px) {
+    gap: 170px;
+  }
+}
+
+.flow__contents ul {
+  padding-top: 40px;
+  margin: 0;
+}
+
+.flow__contents ul li {
+  margin-bottom: 56px;
+}
+
+.flow__contents li h3 {
+  font-size: 1rem;
+  color: #fff;
+  border-bottom: 1px solid #999;
+  padding-left: 24px;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  @media screen and (min-width: 1080px) {
+    width: 450px;
+  }
+  @media (min-width: 1440px) {
+    width: 620px;
+  }
+}
+
+.flow__contents small {
+  font-family: "Khula";
+  display: inline-block;
+  color: #fff;
+  font-size: 10px;
+  margin-bottom: 8px;
+}
+
+.flow__contents li p {
+  font-size: 14px;
+  color: #fff;
+  line-height: 2;
+  padding-left: 24px;
+  @media screen and (min-width: 1080px) {
+    width: 450px;
+  }
+  @media (min-width: 1440px) {
+    width: 620px;
+  }
+}
+
+.flow__image {
+  display: block;
+  margin: 0 auto;
+  width: 53.3vw;
+  max-width: 300px;
+  height: 68vw;
+  max-height: 400px;
+  overflow: hidden;
+  img {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  @media screen and (min-width: 1080px) {
+    margin-top: 300px;
+    margin-right: 0;
+  }
+}
+
+.profile {
+  padding: 0 24px;
+  margin-top: 80px;
+}
+
+.profile__title {
+  font-family: "Khula";
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.profile__name {
+  font-family: "Khula";
+  font-size: 1.25rem; /*20px*/
+  font-weight: 600;
+}
+
+.profile__text {
+  font-family: "Zen Kaku Gothic New";
+  font-size: 0.875rem; /*14px*/
+  line-height: 2;
 }

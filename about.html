@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css">
 
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,11 +35,14 @@
     </nav>
   </header>
   <main>
-    <section class="brand-story">
-      <h2>Until FURYU<br>
-        was born<br>
+    <!-- Brand Story -->
+    <section class="brand__story">
+      <div class="brand__story__title">
+        <h2>Until FURYU<br>
+          was born<br>
+        </h2>
         <span>体験としての心地よさを</span>
-      </h2>
+      </div>
       <p>FURYUは、作り手の趣味から始まりました。<br>
         SNSで作品に対する反響や、丁寧なお客様とのコミュニケーションと、一つひとつ心を込めた作品作りに価値を感じていただけたことがきっかけです。<br>
         作品に対する高い評価とリピーターのお客様が徐々に増え、事業化へと進みました。<br>
@@ -50,7 +54,103 @@
       </div>
     </section>
 
+    <!-- Flow -->
+    <section class="flow__section">
+      <div class="bg__text">
+        <p>FURYU</p>
+      </div>
+      <div class="flow__container">
+        <div class="sticky-header">
+          <h2 class="flow__title">作成までの流れ</h2>
+        </div>
+        <div class="flow__contents">
+          <ul class="flow__lists">
+            <li>
+              <small>(01)</small>
+              <h3>ご依頼</h3>
+              <p>Gmailまたは各種SNS（X、 Instagram）で、受け付けております。<br>
+                その際、予めどんなものをオーダーメイド作成して欲しいかをお伝えいただけると幸いです。ご依頼内容をもとに、ヒアリングへと移らせていただきます。</p>
+            </li>
+            <li>
+              <small>(02)</small>
+              <h3>ヒアリング</h3>
+              <p>Gmailまたは各種SNS（X、 Instagram）で、受け付けております。<br>
+                その際、予めどんなものをオーダーメイド作成して欲しいかをお伝えいただけると幸いです。ご依頼内容をもとに、ヒアリングへと移らせていただきます。</p>
+            </li>
+            <li>
+              <small>(03)</small>
+              <h3>作成</h3>
+              <p>Gmailまたは各種SNS（X、 Instagram）で、受け付けております。<br>
+                その際、予めどんなものをオーダーメイド作成して欲しいかをお伝えいただけると幸いです。ご依頼内容をもとに、ヒアリングへと移らせていただきます。</p>
+            </li>
+            <li>
+              <small>(04)</small>
+              <h3>納品</h3>
+              <p>Gmailまたは各種SNS（X、 Instagram）で、受け付けております。<br>
+                その際、予めどんなものをオーダーメイド作成して欲しいかをお伝えいただけると幸いです。ご依頼内容をもとに、ヒアリングへと移らせていただきます。</p>
+            </li>
+          </ul>
+          <figure class="flow__image"><img src="./image/flow_image.jpg" alt=""></figure>
+        </div>    
+      </div>
+    </section>
+
+    <!-- Profile -->
+    <section class="profile">
+      <h2 class="profile__title">Profile</h2>
+      <p class="profile__name">Shiori</p>
+      <p class="profile__text">2023年からエコクラフト作品を作り初める。<br>
+        現在は、SNSを中心とし、オーダーメイドで作品を受注作成を行なっている。<br>
+        これまで手がけた作品は10点以上に及ぶ。</p>
+      <figure><img src="" alt=""></figure>
+    </section>
+
+    <!-- Contact -->
+    <div id="js-cursor"></div>
+      <section class="contact__area js-area">
+        <a href="#" id="contact-form" target="_blank">
+          <div class="contact__text">
+            <h2>Contact us</h2>
+            <p>作成のご相談はこちらから</p>
+            <small>※GoogleFormにページに移ります</small>
+            <small>※SNSからのお問い合わせも可能です</small>
+          </div>
+        </a>
+    </section>
   </main>
+
+  <footer>
+    <h1>FURYU</h1>
+    <div class="about__lists">
+      <h2>About</h2>
+      <ul class="about__menu">
+        <li>Brand Story</li>
+        <li>Profile</li>
+      </ul>
+    </div>
+    <div class="product__lists">
+      <h2>Product</h2>
+      <ul class="product__menu">
+        <div class="product__menu--1">
+          <li>編みかごバック</li>
+          <li>バスケット</li>
+          <li>鉢カバー</li>
+        </div>
+        <div class="product__menu--2">
+          <li>ランタンシェード</li>
+          <li>小物入れ</li>
+          <li>コースター</li>
+        </div>
+      </ul>
+    </div>
+    <div class="sns__lists">
+      <h2>SNS</h2>
+      <ul class="sns__menu">
+        <li><a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+        <li><a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+      </ul>
+    </div>
+  </footer>
   
 </body>
 </html>
