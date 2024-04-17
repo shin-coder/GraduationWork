@@ -68,7 +68,8 @@ parallaxItems.forEach((item) => {
 //マウスストーカー
 
 const cursor = document.getElementById('js-cursor'); 
-const link = document.getElementsByTagName("a")[6];
+// const link = document.getElementsByTagName("a")[6];
+const links = document.querySelectorAll('a.contact-form')
 const area = document.querySelector('.js-area');
 
 area.addEventListener('mousemove', function (e) {
@@ -76,12 +77,15 @@ area.addEventListener('mousemove', function (e) {
   cursor.style.opacity = '0.8';
 });
 
-link.addEventListener('mouseenter', () => {
-  cursor.classList.add('js-hover');
-}, false);
-link.addEventListener('mouseleave', () => {
-  cursor.classList.remove('js-hover');
-}, false);
+links.forEach(link => {
+  link.addEventListener('mouseenter', () => {
+    cursor.classList.add('js-hover');
+  }, false);
+
+  link.addEventListener('mouseleave', () => {
+    cursor.classList.remove('js-hover');
+  }, false);
+});
 
 area.addEventListener('mouseout', (e) => {
   setTimeout(

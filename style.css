@@ -182,6 +182,7 @@ header {
   img {
     width: 100%;
     height: auto;
+    object-fit: cover;
   }
 }
 
@@ -202,6 +203,7 @@ header {
   img {
     width: 100%;
     height: auto;
+    object-fit: cover;
   }
 }
 
@@ -214,6 +216,7 @@ header {
   img {
     width: 100%;
     height: auto;
+    object-fit: cover;
   }
 }
 
@@ -390,11 +393,11 @@ header {
   }
 }
 
-.text__area {
+.about__text-area {
   padding: 0 24px;
 }
 
-.text__area small {
+.about__text-area small {
   display: block;
   text-align: right;
   font-family: "Khula";
@@ -402,7 +405,7 @@ header {
   font-weight: 300;
 }
 
-.text__area h2 {
+.about__text-area h2 {
   font-family: "Khula";
   font-weight: 600;
   font-size: 2rem;
@@ -414,14 +417,14 @@ header {
   }
 }
 
-.text__area p {
+.about__text-area p {
   margin-top: 40px;
   font-family: "Zen Kaku Gothic New";
   font-size: 0.875rem; /*14px*/
   line-height: 2;
 }
 
-.text__area a {
+.about__text-area a {
   display: block;
   text-align: right;
   margin-top: 24px;
@@ -429,20 +432,6 @@ header {
   font-size: 0.875rem; /*14px*/
   font-weight: bolder;
   height: 20px;
-}
-
-.text__area a::after {
-  content: "";
-  display:inline-block;
-  width: 20px;
-  height: 20px;
-  background-image: url(./image/Arrow-small.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  transform: scale(0.7);
-  vertical-align: middle;
-  margin-left: 4px;
-  margin-bottom: 3px;
 }
 
 .faq {
@@ -707,6 +696,7 @@ footer h1 {
   img {
     width: 100%;
     height: auto;
+    object-fit: cover;
   }
 }
 
@@ -720,6 +710,7 @@ footer h1 {
   img {
     width: 100%;
     height: auto;
+    object-fit: cover;
   }
 }
 
@@ -766,11 +757,10 @@ footer h1 {
 
 .flow__title {
   font-family: "Zen Kaku Gothic New";
-  font-size: 2rem;
+  font-size: 24px;
   color: #fff;
   font-weight: bold;
   @media screen and (min-width: 1080px) {
-    font-size: 24px;
     position: sticky;
     top: 80px;
     left: 0;
@@ -857,7 +847,6 @@ footer h1 {
 }
 
 .profile {
-  padding: 0 24px;
   margin-top: 80px;
 }
 
@@ -873,10 +862,176 @@ footer h1 {
   font-family: "Khula";
   font-size: 1.25rem; /*20px*/
   font-weight: 600;
+  padding: 0 24px;
 }
 
 .profile__text {
   font-family: "Zen Kaku Gothic New";
   font-size: 0.875rem; /*14px*/
   line-height: 2;
+  padding: 0 24px;
+}
+
+.profile__photo {
+  margin-top: 40px;
+  padding: 0 24px;
+  width: min(60%, 240px);
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+.image-wrapper--profile {
+  position: relative;
+  height: 59vw;
+  display: flex;
+  overflow: hidden;
+  gap: 24px;
+  margin-top: 40px;
+  justify-content: unset;
+  flex-direction: row-reverse;
+}
+
+.image-wrapper--profile .product_1, 
+.image-wrapper--profile .product_2 {
+  position: absolute;
+  width: min(37%, 224px);
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+.image-wrapper--profile .product_1 {
+  top: 0;
+  left: 140px;
+}
+
+.image-wrapper--profile .product_2 {
+  top: 0;
+  right: -60px;
+}
+
+/* Productページ */
+
+.product__wicker {
+  margin-top: 100px;
+  padding: 0 24px;
+}
+
+.product__wicker h1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  font-size: 24px;
+  margin-bottom: 40px;
+  small {
+    font-family: "Khula";
+    font-size: 10px;
+  }
+}
+
+.product__wickerBag {
+  width: min(100%, 730px);
+  margin-bottom: 40px;
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+.product__wicker-text {
+  font-size: 14px;
+  line-height: 2;
+}
+
+.product__wicker .select--type {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Khula";
+  font-weight: 400;
+  font-size: 14px;
+  width: 200px;
+  border-bottom: 1px solid #999;
+  margin: 24px 0 24px auto;
+}
+
+.product__wicker .select--color {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Khula";
+  font-weight: 400;
+  font-size: 14px;
+  width: 200px;
+  border-bottom: 1px solid #999;
+  margin: 24px 0 24px auto;
+}
+
+.number-wrapper {
+  display: flex;
+  gap: 16px;
+  a {
+    color: #999;
+  }
+}
+
+.gallery__container {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.wickerBag__gallery {
+  width: 48%;
+  max-width: 267px;
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+.product__wicker h2 {
+  font-family: "Khula";
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 40px;
+  margin-bottom: 24px;
+}
+
+.other-product {
+  padding: 0 24px;
+  margin-top: 80px;
+}
+
+.other-product h2 {
+  font-family: "Khula";
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.other-product-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.other-product-item small {
+  display: inline-block;
+  margin-left: 24px;
+}
+
+
+.other-product-item::after {
+  content: '→';
+  width: 20px;
+  height: 20px;
+  color: #333;
+  vertical-align: middle;
 }
