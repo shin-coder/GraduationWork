@@ -365,33 +365,70 @@ header {
 }
 
 .image-wrapper--about {
+  position: relative;
+  height: 65.1vw;
+  max-height: 550px;
   display: flex;
   justify-content: center;
-  margin-right: 126px;
-  gap: 58px;
-  .item1 {
-    order: 2;
-  }
-  .item1 img {
-    height: auto;
+  align-items: center;
+  margin-bottom: 32px;
+}
 
-    @media screen and (max-width: 768px) {
-      width: 90vw;
-      max-width: 625px;
-    }
+.item2 {
+  position: relative;
+  width: min(90vw, 625px);
+  min-height: 210px;
+  height: 50.2vw;
+  overflow: hidden;
+  img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
   }
+  @media (min-width:768px) {
+    max-height: 386px;
+  }
+}
 
-  .item2 {
-    order: 1;
-    align-self: flex-end;
-    margin-bottom: -60px;
+.item1 {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: calc((100vw - 1440px) / 2);
+  height: 216px;
+  width: 350px;
+  overflow: hidden;
+}
+
+.item3 {
+  display: none;
+  position: absolute;
+  top: 0;
+  height: 317px;
+  width: 224px;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .item1, .item3 {
+    display: block;
   }
 
   .item3 {
-    order: 3;
-    margin-top: -60px;
+    right: calc((100vw - 1440px + 240px) / 2);
   }
 }
+
+@media (min-width: 1440px) {
+  .item1 {
+    left: 0;
+  }
+
+  .item3 {
+    right: 120px; 
+  }
+}
+
 
 .about__text-area {
   padding: 0 24px;
@@ -883,36 +920,36 @@ footer h1 {
   }
 }
 
-.image-wrapper--profile {
-  position: relative;
-  height: 59vw;
+.all-Products-link__container {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   overflow: hidden;
-  gap: 24px;
   margin-top: 40px;
-  justify-content: unset;
-  flex-direction: row-reverse;
+}
+
+.all-Products-link__container a {
+  padding-left: 24px;
+  font-family: "Khula";
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.image-wrapper--profile {
+  display: flex;
+  gap: 4%;
+  width: 60%;
+  transform: translateX(20%);
 }
 
 .image-wrapper--profile .product_1, 
 .image-wrapper--profile .product_2 {
-  position: absolute;
-  width: min(37%, 224px);
+  max-height: 350px;
   img {
     width: 100%;
     height: auto;
     object-fit: cover;
   }
-}
-
-.image-wrapper--profile .product_1 {
-  top: 0;
-  left: 140px;
-}
-
-.image-wrapper--profile .product_2 {
-  top: 0;
-  right: -60px;
 }
 
 /* Productページ */
@@ -1023,6 +1060,7 @@ footer h1 {
 }
 
 .other-product-item small {
+  font-family: "Khula";
   display: inline-block;
   margin-left: 24px;
 }
@@ -1030,8 +1068,9 @@ footer h1 {
 
 .other-product-item::after {
   content: '→';
+  font-family: "Khula";
   width: 20px;
   height: 20px;
   color: #333;
-  vertical-align: middle;
+  padding-top: 4px;
 }
