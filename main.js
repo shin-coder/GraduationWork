@@ -1,3 +1,46 @@
+//ローディング画面
+
+const fadeIn = (element, duration) => {
+  return new Promise((resolve) => {
+    element.style.opacity = '1';
+    setTimeout(() => {
+      resolve();
+    }, duration * 2000);
+  });
+};
+
+const fadeOut = (element, duration) => {
+  return new Promise((resolve) => {
+    element.style.opacity = '0';
+    setTimeout(() => {
+      resolve();
+    }, duration * 1000);
+  });
+};
+
+const slideOut = (element, duration) => {
+  return new Promise((resolve) => {
+    element.classList.add('slide-out');
+    setTimeout(() => {
+      resolve();
+    }, duration * 1000);
+  });
+};
+
+window.addEventListener('DOMContentLoaded', async () => {
+  const text1 = document.querySelector('.loading__text1');
+  const text2 = document.querySelector('.loading__text2');
+  const background = document.querySelector('.loading__wrapper');
+  const firstView = document.querySelector('.main-view');
+
+  await fadeIn(text1, 1);
+  await fadeOut(text1, 2);
+  await fadeIn(text2, 1);
+  await fadeOut(text2, 2);
+  await slideOut(background, 0.8);
+  firstView.style.opacity = '1';
+});
+
 // Swiper実装
 
 const slider1 = new Swiper(".slider1", {
@@ -17,10 +60,10 @@ const slider2 = new Swiper('.slider2', {
   centeredSlides: true,
   grabCursor: true,
   speed: 800, 
-  autoplay: { 
-    delay: 2000,
-    disableOnInteraction: false,
-  },
+  // autoplay: { 
+  //   delay: 2000,
+  //   disableOnInteraction: false,
+  // },
   loop: true,pagination: {
     el: ".swiper-pagination",
     clickable: true,
