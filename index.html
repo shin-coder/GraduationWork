@@ -27,11 +27,68 @@
   <title>FURYU</title>
 </head>
 <body>
-  <header>
-    <nav>
-      <div></div>
-      <div></div>
+  <header class="header">
+    <nav id="js-nav" class="header__nav">
+      <div class="header__nav__container">
+        <ul class="nav__lists">
+          <li class="nav__item--home"><a href="#">HOME</a></li>
+          <li class="nav__item--product">
+            <p>Product<sup>6</sup></p>
+            <ul class="nav__product-items">
+              <li><a href="">
+                <figure>
+                  <img src="./image/all_sub/wicker-1.jpg" alt="">
+                  <figcaption>編みかごバック</figcaption>
+                </figure>
+              </a></li>
+              <li><a href="">
+                <figure>
+                  <img src="./image/all_sub/basket.jpg" alt="">
+                  <figcaption>バスケット</figcaption>
+                </figure>
+              </a></li>
+              <li><a href="">
+                <figure>
+                  <img src="./image/all_sub/cover-1.jpg" alt="">
+                  <figcaption>鉢カバー</figcaption>
+                </figure>
+              </a></li>
+              <li><a href="">
+                <figure>
+                  <img src="./image/all_sub/shade.jpg" alt="">
+                  <figcaption>ランタンシェード</figcaption>
+                </figure>
+              </a></li>
+              <li><a href="">
+                <figure>
+                  <img src="./image/all_sub/case-1.jpg" alt="">
+                  <figcaption>小物入れ</figcaption>
+                </figure>
+              </a></li>
+              <li><a href="">
+                <figure>
+                  <img src="./image/all_sub/coster-1.jpg" alt="">
+                  <figcaption>コースター</figcaption>
+                </figure>
+              </a></li>
+            </ul>
+            <a class="nav__product__all-links" href="">View All Products</a>
+          </li>
+          <li class="nav__item--about">
+            <p>About</p>
+            <ul>
+              <li><a href="">Brand story</a></li>
+              <li><a href="">Profile</a></li>
+            </ul>
+          </li>
+          <li class="nav__item--contact"><a href="#">Contact</a></li>
+        </ul>
+      </div>
     </nav>
+    <button id="js-hamburger-button" class="header__hamburger-button">
+      <div></div>
+      <div></div>
+    </button>
   </header>
   <main>
 
@@ -65,6 +122,24 @@
               data-swiper-parallax-scale="1.2"
               >
               <img src="./image/mv2.jpg" alt="２つのカゴバックが写ったイメージ図"/>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-img" 
+              data-swiper-parallax-x="90%" 
+              data-swiper-parallax-duration="1500" 
+              data-swiper-parallax-scale="1.2"
+              >
+              <img src="./image/mv3.jpg" alt="２つのカゴバックが写ったイメージ図"/>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-img" 
+              data-swiper-parallax-x="90%" 
+              data-swiper-parallax-duration="1500" 
+              data-swiper-parallax-scale="1.2"
+              >
+              <img src="./image/mv4.jpg" alt="２つのカゴバックが写ったイメージ図"/>
             </div>
           </div>
         </div>
@@ -125,16 +200,16 @@
 
     <!-- Product -->
     <section class="product">
-      <h2>Product</h2>
+      <h2 class="product__title">Product<sup>6</sup></h2>
       <div class="swiper slider2">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="product__item">
               <figure class="product__image">
-                <img src="./image/WickerBag.jpg" alt="">
+                <img src="./image/WickerBag.jpg" alt="編みかごバックの単体写真">
               </figure>
               <div class="product__name">
-                <small>(WickerBag)</small>
+                <small>(Wicker Bag)</small>
                 <h3>編みかごバック</h3>
               </div>
               <button>
@@ -145,11 +220,11 @@
           <div class="swiper-slide">
             <div class="product__item">
               <figure class="product__image">
-                <img src="./image/WickerBag.jpg" alt="">
+                <img src="./image/Bascket.jpg" alt="バスケットの単体写真">
               </figure>
               <div class="product__name">
-                <small>(WickerBag)</small>
-                <h3>編みかごバック</h3>
+                <small>(Bascket)</small>
+                <h3>バスケット</h3>
               </div>
               <button>
                 <a href="#">view detail</a>
@@ -159,11 +234,11 @@
           <div class="swiper-slide">
             <div class="product__item">
               <figure class="product__image">
-                <img src="./image/WickerBag.jpg" alt="">
+                <img src="./image/PotCover.jpg" alt="鉢カバーの単体写真">
               </figure>
               <div class="product__name">
-                <small>(WickerBag)</small>
-                <h3>編みかごバック</h3>
+                <small>(Pot Cover)</small>
+                <h3>鉢カバー</h3>
               </div>
               <button>
                 <a href="#">view detail</a>
@@ -173,11 +248,11 @@
           <div class="swiper-slide">
             <div class="product__item">
               <figure class="product__image">
-                <img src="./image/WickerBag.jpg" alt="">
+                <img src="./image/Case.jpg" alt="小物入れの単体写真">
               </figure>
               <div class="product__name">
-                <small>(WickerBag)</small>
-                <h3>編みかごバック</h3>
+                <small>(Accessory Case)</small>
+                <h3>小物入れ</h3>
               </div>
               <button>
                 <a href="#">view detail</a>
@@ -187,11 +262,11 @@
           <div class="swiper-slide">
             <div class="product__item">
               <figure class="product__image">
-                <img src="./image/WickerBag.jpg" alt="">
+                <img src="./image/LampShade.jpg" alt="ランタンシェードの単体写真">
               </figure>
               <div class="product__name">
-                <small>(WickerBag)</small>
-                <h3>編みかごバック</h3>
+                <small>(Lamp Shade)</small>
+                <h3>ランタンシェード</h3>
               </div>
               <button>
                 <a href="#">view detail</a>
@@ -201,11 +276,11 @@
           <div class="swiper-slide">
             <div class="product__item">
               <figure class="product__image">
-                <img src="./image/WickerBag.jpg" alt="">
+                <img src="./image/Coster.jpg" alt="コースターの単体写真">
               </figure>
               <div class="product__name">
-                <small>(WickerBag)</small>
-                <h3>編みかごバック</h3>
+                <small>(Coster)</small>
+                <h3>コースター</h3>
               </div>
               <button>
                 <a href="#">view detail</a>

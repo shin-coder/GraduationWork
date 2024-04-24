@@ -37,8 +37,18 @@ window.addEventListener('DOMContentLoaded', async () => {
   await fadeOut(text1, 2);
   await fadeIn(text2, 1);
   await fadeOut(text2, 2);
-  await slideOut(background, 0.8);
+  await slideOut(background, 0.3);
   firstView.style.opacity = '1';
+});
+
+//ハンバーガーメニュー
+
+const hamburger = document.getElementById('js-hamburger-button');
+const nav = document.getElementById('js-nav');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  nav.classList.toggle('active');
 });
 
 // Swiper実装
@@ -136,5 +146,36 @@ area.addEventListener('mouseout', (e) => {
       cursor.style.opacity = '0';
     }, 100);
 });
+
+//Productページのクリックイベント
+
+const linkButtons = document.querySelectorAll('.select-button');
+const ProductImages = document.getElementById('productImage');
+
+const imageFiles = [
+  'product_wickerBag_1.jpg',
+  'product_wickerBag_2.jpg',
+  'product_wickerBag_3.jpg',
+  'product_wickerBag_4.jpg',
+];
+
+function changeImage(fileName) {
+  ProductImages.src = `./image/product_sub/wicker/${fileName}`;
+}
+
+linkButtons.forEach((button, index) => {
+  button.addEventListener('click', () => {
+    changeImage(imageFiles[index]);
+    setActive(button);
+  })
+});
+
+function setActive(active) {
+  linkButtons.forEach((button) => {
+    button.classList.remove('show');
+    active.classList.add('show');
+  })
+}
+
 
 
