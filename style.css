@@ -1225,6 +1225,18 @@ footer h1 {
   }
 }
 
+.flow__contents li p .caution {
+  display: inline-block;
+  font-size: 12px;
+  margin: 20px 0 0 0;
+}
+
+.flow__contents li p .caution-2 {
+  display: inline-block;
+  font-size: 12px;
+  margin: 8px 0 0 0;
+}
+
 .flow__image {
   display: block;
   margin: 0 auto;
