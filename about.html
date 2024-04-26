@@ -28,15 +28,72 @@
   <title>FURYU | About</title>
 </head>
 <body>
-  <header>
-    <nav>
-      <div></div>
-      <div></div>
+  <header class="header">
+    <nav id="js-nav" class="header__nav">
+      <div class="header__nav__container">
+        <ul class="nav__lists">
+          <li class="nav__item--home"><a href="./index.html">HOME</a></li>
+          <li class="nav__item--product">
+            <p>Product<sup>6</sup></p>
+            <ul class="nav__product-items">
+              <li><a href="./product(wicker).html">
+                <figure>
+                  <img src="./image/all_sub/wicker-1.jpg" alt="">
+                  <figcaption>編みかごバック</figcaption>
+                </figure>
+              </a></li>
+              <li><a href="./product(basket).html">
+                <figure>
+                  <img src="./image/all_sub/basket.jpg" alt="">
+                  <figcaption>バスケット</figcaption>
+                </figure>
+              </a></li>
+              <li><a href="./product(cover).html">
+                <figure>
+                  <img src="./image/all_sub/cover-1.jpg" alt="">
+                  <figcaption>鉢カバー</figcaption>
+                </figure>
+              </a></li>
+              <li><a href="./product(shade).html">
+                <figure>
+                  <img src="./image/all_sub/shade.jpg" alt="">
+                  <figcaption>ランタンシェード</figcaption>
+                </figure>
+              </a></li>
+              <li><a href="./product(case).html">
+                <figure>
+                  <img src="./image/all_sub/case-1.jpg" alt="">
+                  <figcaption>小物入れ</figcaption>
+                </figure>
+              </a></li>
+              <li><a href="./product(coster).html">
+                <figure>
+                  <img src="./image/all_sub/coster-1.jpg" alt="">
+                  <figcaption>コースター</figcaption>
+                </figure>
+              </a></li>
+            </ul>
+            <a class="nav__product__all-links" href="./allProduct.html">View All Products</a>
+          </li>
+          <li class="nav__item--about">
+            <p>About</p>
+            <ul>
+              <li><a href="./about.html#brand">Brand story</a></li>
+              <li><a href="./about.html#profile">Profile</a></li>
+            </ul>
+          </li>
+          <li class="nav__item--contact"><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </nav>
+    <button id="js-hamburger-button" class="header__hamburger-button">
+      <div></div>
+      <div></div>
+    </button>
   </header>
   <main>
     <!-- Brand Story -->
-    <section class="brand__story">
+    <section id="brand" class="brand__story">
       <div class="brand__story__title">
         <h2>Until FURYU<br>
           was born<br>
@@ -96,7 +153,7 @@
     </section>
 
     <!-- Profile -->
-    <section class="profile">
+    <section id="profile" class="profile">
       <h2 class="profile__title">Profile</h2>
       <div class="profile-wrapper">
         <div class="text-wrap">
@@ -136,22 +193,22 @@
       <div class="about__lists">
         <h2>About</h2>
         <ul class="about__menu">
-          <li>Brand Story</li>
-          <li>Profile</li>
+          <li><a href="./about.html#brand">Brand Story</a></li>
+          <li><a href="./about.html#profile">Profile</a></li>
         </ul>
       </div>
       <div class="product__lists">
         <h2>Product</h2>
         <ul class="product__menu">
           <div class="product__menu--1">
-            <li>編みかごバック</li>
-            <li>バスケット</li>
-            <li>鉢カバー</li>
+            <li><a href="./product(wicker).html">編みかごバック</a></li>
+            <li><a href="./product(basket).html">バスケット</a></li>
+            <li><a href="./product(cover).html">鉢カバー</a></li>
           </div>
           <div class="product__menu--2">
-            <li>ランタンシェード</li>
-            <li>小物入れ</li>
-            <li>コースター</li>
+            <li><a href="./product(shade).html">ランタンシェード</a></li>
+            <li><a href="./product(case).html">小物入れ</a></li>
+            <li><a href="./product(coster).html">コースター</a></li>
           </div>
         </ul>
       </div>

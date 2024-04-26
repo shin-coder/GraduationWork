@@ -1,0 +1,47 @@
+{
+  "categories": [
+    {
+      "name": "wicker",
+      "images": [
+        "product_wickerBag_1.jpg",
+        "product_wickerBag_2.jpg",
+        "product_wickerBag_3.jpg",
+        "product_wickerBag_4.jpg"
+      ]
+    },
+    {
+      "name": "basket",
+      "images": [
+        "product_basket.jpg"
+      ]
+    },
+    {
+      "name": "shade",
+      "images": [
+        "product_lampShade.jpg"
+      ]
+    },
+    {
+      "name": "cover",
+      "images": [
+        "product_potCover_1.jpg",
+        "product_potCover_2.jpg"
+      ]
+    },
+    {
+      "name": "case",
+      "images": [
+        "product_case_1.jpg",
+        "product_case_2.jpg"
+      ]
+    },
+    {
+      "name": "coster",
+      "images": [
+        "product_coster_1.jpg",
+        "product_coster_2.jpg",
+        "product_coster_3.jpg"
+      ]
+    }
+  ]
+}

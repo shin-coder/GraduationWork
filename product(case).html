@@ -24,8 +24,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   
   <link rel="stylesheet" href="style.css">
+  <script src="case.js" defer></script>
   <script src="main.js" defer></script>
-  <title>FURYU | All Products</title>
+  <title>FURYU | Accessory Case</title>
 </head>
 <body>
   <header class="header">
@@ -91,148 +92,102 @@
       <div></div>
     </button>
   </header>
-
   <main>
-    <section class="all__prducts">
-      <h1>All Products</h1>
-      <h2>編みかごバック</h2>
-      <ul class="products__container">
-        <li>
-          <figure class="product-item">
-            <img src="./image/all_sub/wicker-1.jpg" alt="">
-            <figcaption>
-              <p>Type01</p>
-            </figcaption>
-          </figure>
-        </li>
-        <li>
-          <figure class="product-item">
-            <img src="./image/all_sub/wicker-2.jpg" alt="">
-            <figcaption>
-              <p>Type02</p>
-            </figcaption>
-          </figure>
-        </li>
-        <li>
-          <figure class="product-item">
-            <img src="./image/all_sub/wicker-3.jpg" alt="">
-            <figcaption>
-              <p>Type03</p>
-            </figcaption>
-          </figure>
-        </li>
-        <li>
-          <figure class="product-item">
-            <img src="./image/all_sub/wicker-4.jpg" alt="">
-            <figcaption>
-              <p>Type04</p>
-            </figcaption>
-          </figure>
-        </li>
-      </ul>
-      <a href="#">view details →</a>
+    <!-- Product Detail -->
+    <section class="product__detail">
+      <h1>小物入れ<small>/Accessory Case</small></h1>
+      <figure class="product__detail-container">
+        <img id="caseImage" src="./image/product_sub/case/product_case_1.jpg" alt="タイプ１の小物入れ">
+        <figcaption>
+          <p class="product__detail-text">編みかごバックの説明が入ります。編みかごバックの説明が入ります。編みかごバックの説明が入ります。編みかごバックの説明が入ります。</p>
+          <div class="select--type">
+            <p>Type</p>
+            <div class="number-wrapper">
+              <button class="select-button show" href="">01</button>
+              <button class="select-button" href="">02</button>
+              <!-- <button class="select-button" href="">03</button>
+              <button class="select-button" href="">04</button>  -->
+            </div>
+          </div>
+        </figcaption>
+      </figure>
+      <h2>Gallery</h2>
+      <div class="gallery__container">
+        <figure class="gallery__image"><img src="./image/product_sub/case/case_gallery-1.jpg" alt=""></figure>        
+        <figure class="gallery__image"><img src="./image/product_sub/case/case_gallery-2.jpg" alt=""></figure>        
+        <figure class="gallery__image"><img src="./image/product_sub/case/case_gallery-3.jpg" alt=""></figure>        
+        <figure class="gallery__image"><img src="./image/product_sub/case/case_gallery-4.jpg" alt=""></figure>        
+      </div>
+    </section>
 
-      <h2>コースター</h2>
-      <ul class="products__container">
-        <li>
-          <figure class="product-item">
-            <img src="./image/all_sub/coster-1.jpg" alt="">
-            <figcaption>
-              <p>Type01</p>
-            </figcaption>
-          </figure>
-        </li>
-        <li>
-          <figure class="product-item">
-            <img src="./image/all_sub/coster-2.jpg" alt="">
-            <figcaption>
-              <p>Type02</p>
-            </figcaption>
-          </figure>
-        </li>
-        <li>
-          <figure class="product-item">
-            <img src="./image/all_sub/coster-3.jpg" alt="">
-            <figcaption>
-              <p>Type03</p>
-            </figcaption>
-          </figure>
-        </li>
-      </ul>
-      <a href="#">view details →</a>
+    <!-- Flow -->
+    <section class="flow__section">
+      <div class="bg__text">
+        <p>FURYU</p>
+      </div>
+      <div class="flow__container">
+        <div class="sticky-header">
+          <h2 class="flow__title">作成までの流れ</h2>
+        </div>
+        <div class="flow__contents">
+          <ul class="flow__lists">
+            <li>
+              <small>(01)</small>
+              <h3>ご依頼</h3>
+              <p>Gmailまたは各種SNS（X、 Instagram）で、受け付けております。<br>
+                その際、予めどんなものをオーダーメイド作成して欲しいかをお伝えいただけると幸いです。ご依頼内容をもとに、ヒアリングへと移らせていただきます。</p>
+            </li>
+            <li>
+              <small>(02)</small>
+              <h3>ヒアリング</h3>
+              <p>Gmailまたは各種SNS（X、 Instagram）で、受け付けております。<br>
+                その際、予めどんなものをオーダーメイド作成して欲しいかをお伝えいただけると幸いです。ご依頼内容をもとに、ヒアリングへと移らせていただきます。</p>
+            </li>
+            <li>
+              <small>(03)</small>
+              <h3>作成</h3>
+              <p>Gmailまたは各種SNS（X、 Instagram）で、受け付けております。<br>
+                その際、予めどんなものをオーダーメイド作成して欲しいかをお伝えいただけると幸いです。ご依頼内容をもとに、ヒアリングへと移らせていただきます。</p>
+            </li>
+            <li>
+              <small>(04)</small>
+              <h3>納品</h3>
+              <p>Gmailまたは各種SNS（X、 Instagram）で、受け付けております。<br>
+                その際、予めどんなものをオーダーメイド作成して欲しいかをお伝えいただけると幸いです。ご依頼内容をもとに、ヒアリングへと移らせていただきます。</p>
+            </li>
+          </ul>
+          <figure class="flow__image"><img src="./image/about_sub/flow_image.jpg" alt=""></figure>
+        </div>    
+      </div>
+    </section>
 
-      <h2>小物入れ</h2>
-      <ul class="products__container">
-        <li>
-          <figure class="product-item">
-            <img src="./image/all_sub/case-1.jpg" alt="">
-            <figcaption>
-              <p>Type01</p>
-            </figcaption>
-          </figure>
-        </li>
-        <li>
-          <figure class="product-item">
-            <img src="./image/all_sub/case-2.jpg" alt="">
-            <figcaption>
-              <p>Type02</p>
-            </figcaption>
-          </figure>
-        </li>
-      </ul>
-      <a href="#">view details →</a>
-
-      <h2>鉢カバー</h2>
-      <ul class="products__container">
-        <li>
-          <figure class="product-item">
-            <img src="./image/all_sub/cover-1.jpg" alt="">
-            <figcaption>
-              <p>Type01</p>
-            </figcaption>
-          </figure>
-        </li>
-        <li>
-          <figure class="product-item">
-            <img src="./image/all_sub/cover-2.jpg" alt="">
-            <figcaption>
-              <p>Type02</p>
-            </figcaption>
-          </figure>
-        </li>
-      </ul>
-      <a href="#">view details →</a>
-
-      <h2>バスケット</h2>
-      <ul class="products__container">
-        <li>
-          <figure class="product-item">
-            <img src="./image/all_sub/basket.jpg" alt="">
-            <figcaption>
-              <p>Type01</p>
-            </figcaption>
-          </figure>
-        </li>
-      </ul>
-      <a href="#">view details →</a>
-
-      <h2>ランタンシェード</h2>
-      <ul class="products__container">
-        <li>
-          <figure class="product-item">
-            <img src="./image/all_sub/shade.jpg" alt="">
-            <figcaption>
-              <p>Type01</p>
-            </figcaption>
-          </figure>
-        </li>
-      </ul>
-      <a href="#">view details →</a>
+    <!-- Other Product -->
+    <section class="other-product">
+      <h2>Other Products</h2>
+      <div class="other-product__lists">
+        <ul>
+          <li class="other-product-item">
+            <a href="">編みかごバック<small>/Wicker Bag</small></a>
+          </li>
+          <li class="other-product-item">
+            <a href="">バスケット<small>/Basket</small></a>
+          </li>
+          <li class="other-product-item">
+            <a href="">鉢カバー<small>/Pot Cover</small></a>
+          </li>
+          <li class="other-product-item">
+            <a href="">ランタンシェード<small>/Lamp Shade</small></a>
+          </li>
+          <li class="other-product-item">
+            <a href="">コースター<small>/Coster</small></a>
+          </li>
+        </ul>
+      </div>
     </section>
 
     <!-- Contact -->
     <div id="js-cursor"></div>
-    <section id="contact" class="contact__area js-area">
+    <section class="contact__area js-area">
         <a href="#" class="contact-form" target="_blank">
           <div class="contact__text">
             <h2>Contact us</h2>

@@ -37,9 +37,11 @@ window.addEventListener('DOMContentLoaded', async () => {
   await fadeOut(text1, 2);
   await fadeIn(text2, 1);
   await fadeOut(text2, 2);
-  await slideOut(background, 0.3);
+  await slideOut(background, 0.5);
+
   firstView.style.opacity = '1';
 });
+
 
 //ハンバーガーメニュー
 
@@ -149,6 +151,7 @@ area.addEventListener('mouseout', (e) => {
 
 //Productページのクリックイベント
 
+/*
 const linkButtons = document.querySelectorAll('.select-button');
 const ProductImages = document.getElementById('productImage');
 
@@ -176,6 +179,39 @@ function setActive(active) {
     active.classList.add('show');
   })
 }
+*/
 
+/*
+const linkButtons = document.querySelectorAll('.select-button');
+const productImage = document.getElementById('wickerImage');
 
+// JSONデータを読み込む
+fetch('product-images.json')
+  .then(response => response.json())
+  .then(data => {
+    data.categories.forEach(category => {
+      const categoryName = category.name;
+      const images = category.images
 
+      function changeImage(fileName) {
+        productImage.src = `./image/product_sub/${categoryName}/${fileName}`;
+      };
+
+      linkButtons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+          changeImage(images[index]);
+          setActive(button);
+        });
+      });
+    });
+
+    function setActive(active) {
+      linkButtons.forEach(button => {
+        button.classList.remove('show');
+      });
+      active.classList.add('show');
+    }
+  })
+  .catch(error => console.error('JSONデータの読み込みに失敗しました:', error));
+
+  */

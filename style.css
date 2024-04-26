@@ -232,6 +232,11 @@ img {
 
 /* TOPページ */
 
+/* .top {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+} */
+
 .main-view {
   position: relative;
   width: 100%;
@@ -819,7 +824,7 @@ img {
 }
 
 .contact__area {
-  margin-top: 80px;
+  margin-top: 100px;
   @media (min-width: 1080px) {
     margin-top: 170px;
   }
@@ -1349,7 +1354,7 @@ footer h1 {
 
 /* Productページ */
 
-.product__wicker {
+.product__detail {
   margin-top: 100px;
   padding: 0 24px;
   @media (min-width: 768px) {
@@ -1360,7 +1365,7 @@ footer h1 {
   }
 }
 
-.product__wicker h1 {
+.product__detail h1 {
   display: flex;
   justify-content: space-between;
   align-items: end;
@@ -1372,7 +1377,7 @@ footer h1 {
   }
 }
 
-.product__wickerBag {
+.product__detail-container {
   width: 100%;
   margin-bottom: 40px;
   @media (min-width: 800px) {
@@ -1383,20 +1388,20 @@ footer h1 {
   }
 }
 
-.product__wickerBag img {
+.product__detail-container img {
   width: min(100%, 630px);
 }
 
-.product__wickerBag figcaption {
+.product__detail-container figcaption {
   margin-top: 24px;
 }
 
-.product__wicker-text {
+.product__detail-text {
   font-size: clamp(0.875rem, 0.831rem + 0.19vw, 1rem);
   line-height: 2;
 }
 
-.product__wicker .select--type {
+.product__detail .select--type {
   display: flex;
   justify-content: space-between;
   font-family: "Khula";
@@ -1430,7 +1435,7 @@ footer h1 {
   }
 }
 
-.product__wicker h2 {
+.product__detail h2 {
   font-family: "Khula";
   font-size: clamp(1.375rem, 1.155rem + 0.94vw, 2rem);
   font-weight: 600;
