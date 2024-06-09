@@ -717,7 +717,6 @@ img {
   margin-top: 24px;
   font-family: "Zen Kaku Gothic New";
   font-size: clamp(0.875rem, 0.831rem + 0.19vw, 1rem);
-  font-weight: 600;
 }
 
 .about__text-area a span {
@@ -861,7 +860,7 @@ img {
 
 .contact__text h2 {
   margin-top: 64px;
-  font-family: "Kuhula";
+  font-family: "Khula";
   font-size: clamp(2rem, 1.296rem + 3vw, 4rem);
   font-weight: bold;
   color: #333;
@@ -1460,14 +1459,14 @@ footer h1 {
 }
 
 
-.other-product-item::after {
+/* .other-product-item::after {
   content: '→';
   font-family: "Khula";
   width: 20px;
   height: 20px;
   color: #333;
   padding-top: 4px;
-}
+} */
 
 @media (min-width: 1080px) {
   .other-product-item {
