@@ -20,7 +20,6 @@ img {
   object-fit: cover;
 }
 
-
 /* ヘッダー */
 
 .header {
@@ -43,14 +42,13 @@ img {
   transition: ease-in-out .4s;
   padding: 100px 24px 80px 24px;
   @media (min-width: 768px) {
-    padding-right: 40px;
-    padding-left: 40px;
+    padding: 0 40px;
   }
   @media (min-width: 1080px) {
-    padding-right: 80px;
-    padding-left: 80px;
+    padding: 0 80px;
   }
 }
+
 
 .header__nav__container {
   max-width: 1440px;
@@ -86,10 +84,11 @@ img {
   font-size: clamp(1.25rem, 0.81rem + 1.88vw, 2.5rem);
   font-weight: 600;
   margin-bottom: 20px;
-  sup {
-    font-size: clamp(0.75rem, 0.662rem + 0.38vw, 1rem);
-    margin-left: 2px;
-  }
+}
+
+.nav__item--product p sup, .nav__item--about p sup {
+  font-size: clamp(0.75rem, 0.662rem + 0.38vw, 1rem);
+  margin-left: 2px;
 }
 
 .nav__item--about p {
@@ -129,9 +128,10 @@ img {
 .nav__item--about ul {
   display: flex;
   gap: 20px;
-  li {
-    font-size: clamp(0.875rem, 0.831rem + 0.19vw, 1rem);
-  }
+}
+
+.nav__item--about ul li {
+  font-size: clamp(0.875rem, 0.831rem + 0.19vw, 1rem);
 }
 
 .nav__item--contact {
@@ -160,14 +160,15 @@ img {
   width: 40px;
   height: 16px;
   right: 5%;
-  div {
-    position: relative;
-    width: 40px;
-    height: 1px;
-    background-color: #333;
-    transition: ease .4s;
-    margin-bottom: 8px;
-  }
+}
+
+.header__hamburger-button div {
+  position: relative;
+  width: 40px;
+  height: 1px;
+  background-color: #333;
+  transition: ease .4s;
+  margin-bottom: 8px;
 }
 
 .header__hamburger-button.active div:nth-child(1) {
@@ -278,12 +279,13 @@ img {
   width: 100%;
   height: auto;
   overflow: hidden;
-  img {
-    width: 100%;
+}
+
+.slider1 .swiper-slide img {
+  width: 100%;
     height: auto;
     object-fit: cover;
     object-position: center;
-  }
 }
 
 .main-view__title {
@@ -300,6 +302,7 @@ img {
     margin-bottom: calc(min(103vw, 485px) / 2 + 270px);
   }
 }
+
 
 .main-view__text {
   position: absolute;
@@ -344,11 +347,6 @@ img {
   width: 70px;
   height: 35px;
   margin-right: 8px;
-  img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
 }
 
 .title__text-image:nth-child(2){
@@ -390,7 +388,7 @@ img {
   @media (min-width:768px) {
     padding: 0 40px;
   }
-  @media (min-width: 1080px) {
+  @media (min-width:1080px) {
     padding: 0 80px;
   }
 }
@@ -403,11 +401,6 @@ img {
   overflow: hidden;
   position: relative;
   right: 0;
-  img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
 }
 
 .image-wrapper--philosophy {
@@ -420,7 +413,7 @@ img {
     margin-top: 64px;
     padding: 0 40px;
   }
-  @media (min-width: 1080px) {
+  @media (min-width:1080px) {
     padding: 0 80px;
     margin-top: 170px;
   }
@@ -432,11 +425,6 @@ img {
   height: 29.8vw;
   max-height: 386px;
   overflow: hidden;
-  img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
 }
 
 .philosophy__image-3 {
@@ -445,14 +433,9 @@ img {
   height: 19vw;
   max-height: 185px;
   overflow: hidden;
-  img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
 }
 
-.philosophy__copy{
+.philosophy__copy {
   align-items: center;
   display: flex;
   overflow:hidden;
@@ -464,7 +447,7 @@ img {
   @media (min-width:768px) {
     margin-top: 64px;
   }
-  @media (min-width: 1080px) {
+  @media (min-width:1080px) {
     margin-top: 120px;
   }
 }
@@ -503,10 +486,11 @@ img {
   font-weight: 600;
   text-align: center;
   margin-bottom: 40px;
-  sup {
-    font-size: clamp(0.875rem, 0.743rem + 0.56vw, 1.25rem);
-    margin-left: 0.3%;
-  }
+}
+
+.product__title sup {
+  font-size: clamp(0.875rem, 0.743rem + 0.56vw, 1.25rem);
+  margin-left: 0.3%;
 }
 
 .slider2 {
@@ -549,25 +533,28 @@ img {
 
 .product__item .product__name {
   margin: 8px 0 16px;
-  small {
-    font-family: "khula";
-    font-size: clamp(0.625rem, 0.581rem + 0.19vw, 0.75rem);
-  }
-  h3 {
-    font-family: "Zen Kaku Gothic New";
-    font-weight: 500;
-    font-size: clamp(1rem, 0.78rem + 0.94vw, 1.625rem);
-  }
+}
+
+.product__item .product__name small {
+  font-family: "khula";
+  font-size: clamp(0.625rem, 0.581rem + 0.19vw, 0.75rem);
+}
+
+.product__item .product__name h3 {
+  font-family: "Zen Kaku Gothic New";
+  font-weight: 500;
+  font-size: clamp(1rem, 0.78rem + 0.94vw, 1.625rem);
 }
 
 .product__item button {
   padding-bottom: 1rem;
-  a {
-    font-family: "khula";
-    font-size: clamp(0.875rem, 0.831rem + 0.19vw, 1rem);
-    color: #333;
-    font-weight: 400;
-  }
+}
+
+.product__item button a {
+  font-family: "khula";
+  font-size: clamp(0.875rem, 0.831rem + 0.19vw, 1rem);
+  color: #333;
+  font-weight: 400;
 }
 
 .swiper-button-prev, .swiper-button-next {
@@ -636,11 +623,6 @@ img {
   min-height: 210px;
   height: 50.2vw;
   overflow: hidden;
-  img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  }
   @media (min-width:768px) {
     max-height: 386px;
   }
@@ -709,11 +691,12 @@ img {
   font-weight: 600;
   font-size: clamp(2rem, 1.78rem + 0.94vw, 2.625rem);
   line-height: 1;
-  span {
-    font-family: "Zen Kaku Gothic New";
-    font-size: clamp(0.75rem, 0.706rem + 0.19vw, 0.875rem);
-    font-weight: 500;
-  }
+}
+
+.about__text-area h2 span {
+  font-family: "Zen Kaku Gothic New";
+  font-size: clamp(0.75rem, 0.706rem + 0.19vw, 0.875rem);
+  font-weight: 500;
 }
 
 .about__text-area p {
@@ -944,22 +927,6 @@ footer {
   }
 }
 
-/* footer::before {
-  content: '';
-  background-image: url(./image/footer_bg.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-  mix-blend-mode: multiply;
-  opacity: .4;
-} */
-
 footer h1 {
   font-family: "Antonio";
   font-size: 6.25rem; /*100px*/
@@ -971,22 +938,24 @@ footer h1 {
 
 .about__lists, .product__lists, .sns__lists {
   margin-bottom: 40px;
-  h2 {
-    font-family: "Khula";
-    color: #fff;
-    font-size: clamp(1rem, 0.912rem + 0.38vw, 1.25rem);
-    font-weight: 600;
-    border-bottom: 1px solid #fff;
-    padding-bottom: 8px;
-    margin-bottom: 24px;
-  }
-  li a {
-    display: inline-block;
-    font-family: "Zen Kaku Gothic New";
-    font-size: clamp(0.875rem, 0.831rem + 0.19vw, 1rem);
-    color: #fff;
-    margin-bottom: 16px;
-  }
+}
+
+.about__lists h2, .product__lists h2, .sns__lists h2 {
+  font-family: "Khula";
+  color: #fff;
+  font-size: clamp(1rem, 0.912rem + 0.38vw, 1.25rem);
+  font-weight: 600;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 8px;
+  margin-bottom: 24px;
+}
+
+.about__lists li a, .product__lists li a, .sns__lists li a {
+  display: inline-block;
+  font-family: "Zen Kaku Gothic New";
+  font-size: clamp(0.875rem, 0.831rem + 0.19vw, 1rem);
+  color: #fff;
+  margin-bottom: 16px;
 }
 
 @media (min-width: 1080px) {
@@ -1083,11 +1052,6 @@ footer h1 {
   max-height: 400px;
   overflow: hidden;
   margin: 0;
-  img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
 }
 
 .brand__image-2 {
@@ -1097,18 +1061,12 @@ footer h1 {
   max-height: 200px;
   overflow: hidden;
   margin: 0;
-  img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
 }
 
 .flow__section {
   position: relative;
   width: 100%;
   background-color: #333;
-  margin: 0 auto;
   padding: 0 24px;
   margin-top: 80px;
   @media (min-width: 768px) {
@@ -1145,7 +1103,7 @@ footer h1 {
   position: relative;
   width: 100%;
   padding-top: 80px;
-  @media screen and (min-width: 1080px) {
+  @media (min-width: 1080px) {
     position: sticky;
     top: 104px;
     left: 0;
@@ -1159,7 +1117,7 @@ footer h1 {
   font-size: clamp(1.375rem, 1.155rem + 0.94vw, 2rem);
   color: #fff;
   font-weight: bold;
-  @media screen and (min-width: 1080px) {
+  @media (min-width: 1080px) {
     position: sticky;
     top: 80px;
     left: 0;
@@ -1169,7 +1127,7 @@ footer h1 {
 .flow__contents {
   position: relative;
   padding-bottom: 80px;
-  @media screen and (min-width: 1080px) {
+  @media (min-width: 1080px) {
     position: relative;
     display: flex;
     flex-direction: row-reverse;
@@ -1245,15 +1203,21 @@ footer h1 {
   height: 68vw;
   max-height: 400px;
   overflow: hidden;
-  img {
+  /* img {
     position: relative;
     width: 100%;
     height: auto;
-  }
+  } */
   @media screen and (min-width: 1080px) {
     margin-top: 300px;
     margin-right: 0;
   }
+}
+
+.flow__image img {
+  position: relative;
+  width: 100%;
+  height: auto;
 }
 
 .profile {
@@ -1306,11 +1270,6 @@ footer h1 {
 .profile__photo {
   margin: 24px auto 0;
   width: min(50%, 240px);
-  img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
 }
 
 @media (min-width: 768px) {
@@ -1365,19 +1324,16 @@ footer h1 {
 .image-wrapper--profile .product_2 {
   width: min(100%, 224px);
   max-height: 350px;
-  img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-  }
 }
 
 
 /* Productページ */
 
 .product__detail {
-  margin-top: 100px;
+  /* margin-top: 100px; */
   padding: 0 24px;
+  max-width: 1440px;
+  margin: 100px 0 auto 0;
   @media (min-width: 768px) {
     padding: 0 40px;
   }
@@ -1392,10 +1348,11 @@ footer h1 {
   align-items: end;
   font-size: clamp(1.375rem, 1.155rem + 0.94vw, 2rem);
   margin-bottom: 40px;
-  small {
-    font-family: "Khula";
-    font-size: clamp(0.625rem, 0.537rem + 0.38vw, 0.875rem);
-  }
+}
+
+.product__detail h1 small {
+  font-family: "Khula";
+  font-size: clamp(0.625rem, 0.537rem + 0.38vw, 0.875rem);
 }
 
 .product__detail-container {
@@ -1436,12 +1393,14 @@ footer h1 {
 .number-wrapper {
   display: flex;
   gap: 16px;
-  .select-button {
-    color: #999;
-  }
-  .select-button.show {
-    color: #333;
-  }
+}
+
+.number-wrapper .select-button {
+  color: #999;
+}
+
+.number-wrapper .select-button.show {
+  color: #333;
 }
 
 .gallery__container {
@@ -1530,7 +1489,6 @@ footer h1 {
   }
 
   .other-product-item:hover::before {
-    /* background-image: url(./image/product_sub/hover-basket.jpg); */
     background-size: cover; 
     background-repeat: no-repeat;
     background-position: center;
@@ -1578,11 +1536,11 @@ footer h1 {
   font-weight: 600;
   text-align: center;
   margin-bottom: 40px;
-  sup {
-    font-size: clamp(1rem, 0.909rem + 0.45vw, 1.25rem);
-    margin-left: 2px;
+}
 
-  }
+.all__prducts h1 sup {
+  font-size: clamp(1rem, 0.909rem + 0.45vw, 1.25rem);
+  margin-left: 2px;
 }
 
 .all__prducts h2 {
