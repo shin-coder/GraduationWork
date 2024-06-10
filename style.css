@@ -596,6 +596,36 @@ img {
   background-color: #7C6957;
 }
 
+.hover-rotate {
+  perspective: 300px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.hover-rotate > span {
+  backface-visibility: hidden;
+  transition: transform .3s;
+  display: block;
+  height: 20px;
+}
+
+/* ホバー前 */
+.hover-rotate > span:first-child {
+  transform: translateY(10px) rotateX(0deg);
+}
+.hover-rotate > span:last-child {
+  transform: rotateX(-90deg);
+}
+
+/* ホバー時 */
+.hover-rotate:hover > span:first-child {
+  transform: rotateX(90deg);
+}
+.hover-rotate:hover > span:last-child {
+  transform: translateY(-10px) rotateX(0deg);
+}
+
+
 .about {
   max-width: 1440px;
   margin: 80px auto 0;
@@ -711,16 +741,17 @@ img {
   }
 }
 
-.about__text-area a {
-  display: block;
+.about-link {
   text-align: right;
-  margin-top: 24px;
-  font-family: "Zen Kaku Gothic New";
-  font-size: clamp(0.875rem, 0.831rem + 0.19vw, 1rem);
 }
 
-.about__text-area a span {
+.about__text-area a {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: 0;
+  margin-top: 24px;
   font-family: "Khula";
+  font-size: clamp(0.75rem, 0.706rem + 0.19vw, 0.875rem);
 }
 
 .faq {
@@ -989,7 +1020,7 @@ footer h1 {
   background-color: #fff;
   color: #333;
   border-radius: 50%;
-  padding: 8px;
+  padding: 9px 10px;
 }
 
 
