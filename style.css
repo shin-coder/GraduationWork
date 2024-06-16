@@ -44,12 +44,12 @@ img {
   transform: translateX(100%);
   background-color: #f9f9f9;
   transition: ease-in-out .4s;
-  padding: 100px 24px 80px 24px;
+  padding: 50px 24px 80px 24px;
   @media (min-width: 768px) {
-    padding: 0 40px;
+    padding: 80px 40px;
   }
   @media (min-width: 1080px) {
-    padding: 0 80px;
+    padding: 100px 80px;
   }
 }
 
@@ -61,7 +61,7 @@ img {
 
 .nav__item--home {
   font-family: "Khula";
-  font-size: clamp(0.875rem, 0.743rem + 0.56vw, 1.25rem);
+  font-size: clamp(0.75rem, 0.564rem + 0.76vw, 1.25rem);
   font-weight: 600;
   margin-bottom: 48px;
 }
@@ -79,13 +79,13 @@ img {
   transform: rotate(180deg);
 }
 
-.nav__item--product, .nav__item--about {
+.nav__item--product {
   margin-bottom: 48px;
 }
 
 .nav__item--product p, .nav__item--about p {
   font-family: "Khula";
-  font-size: clamp(1.25rem, 0.81rem + 1.88vw, 2.5rem);
+  font-size: clamp(1rem, 0.629rem + 1.52vw, 2rem);
   font-weight: 600;
   margin-bottom: 20px;
 }
@@ -129,6 +129,10 @@ img {
   border-bottom: 1px solid #333;
 }
 
+.nav__item--about {
+  height: 46px;
+}
+
 .nav__item--about ul {
   display: flex;
   gap: 20px;
@@ -140,8 +144,11 @@ img {
 
 .nav__item--contact {
   font-family: "Khula";
-  font-size: 32px;
+  font-size: clamp(2rem, 1.629rem + 1.52vw, 3rem);
   font-weight: 600;
+  height: 46px;
+  display: flex;
+  align-items: flex-end;
 }
 
 .nav__item--contact a::after {
@@ -149,12 +156,25 @@ img {
   display: inline-block;
   width: 30px;
   height: 30px;
-  margin-left: 8px;
+  margin-left: 5px;
   background-image: url(./image/Arrow-big.png);
   background-repeat: no-repeat;
   background-position: center;
   vertical-align: middle;
   scale: .7;
+}
+
+.nav__list-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-right: 20px;
+  @media (min-width: 768px) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: baseline;
+    gap: 64px;
+  }
 }
 
 .header__hamburger-button {
