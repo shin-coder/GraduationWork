@@ -51,6 +51,7 @@ const nav = document.getElementById('js-nav');
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('active');
   nav.classList.toggle('active');
+  document.body.classList.toggle('nav-active');
 });
 
 // Swiper実装
@@ -148,70 +149,3 @@ area.addEventListener('mouseout', (e) => {
       cursor.style.opacity = '0';
     }, 100);
 });
-
-//Productページのクリックイベント
-
-/*
-const linkButtons = document.querySelectorAll('.select-button');
-const ProductImages = document.getElementById('productImage');
-
-const imageFiles = [
-  'product_wickerBag_1.jpg',
-  'product_wickerBag_2.jpg',
-  'product_wickerBag_3.jpg',
-  'product_wickerBag_4.jpg',
-];
-
-function changeImage(fileName) {
-  ProductImages.src = `./image/product_sub/wicker/${fileName}`;
-}
-
-linkButtons.forEach((button, index) => {
-  button.addEventListener('click', () => {
-    changeImage(imageFiles[index]);
-    setActive(button);
-  })
-});
-
-function setActive(active) {
-  linkButtons.forEach((button) => {
-    button.classList.remove('show');
-    active.classList.add('show');
-  })
-}
-*/
-
-/*
-const linkButtons = document.querySelectorAll('.select-button');
-const productImage = document.getElementById('wickerImage');
-
-// JSONデータを読み込む
-fetch('product-images.json')
-  .then(response => response.json())
-  .then(data => {
-    data.categories.forEach(category => {
-      const categoryName = category.name;
-      const images = category.images
-
-      function changeImage(fileName) {
-        productImage.src = `./image/product_sub/${categoryName}/${fileName}`;
-      };
-
-      linkButtons.forEach((button, index) => {
-        button.addEventListener('click', () => {
-          changeImage(images[index]);
-          setActive(button);
-        });
-      });
-    });
-
-    function setActive(active) {
-      linkButtons.forEach(button => {
-        button.classList.remove('show');
-      });
-      active.classList.add('show');
-    }
-  })
-  .catch(error => console.error('JSONデータの読み込みに失敗しました:', error));
-
-  */
