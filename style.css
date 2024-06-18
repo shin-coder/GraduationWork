@@ -1,20 +1,27 @@
 @charset "utf-8";
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 body {
   margin: 0 auto;
   font-family: "Zen Kaku Gothic New", "Antonio", "Khula", sans-serif;
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
 }
 
 body.nav-active {
   overflow: hidden;
 }
 
-h1, h2, h3, small, p, a {
+h1,
+h2,
+h3,
+small,
+p,
+a {
   color: #333;
 }
 
@@ -43,7 +50,7 @@ img {
   height: 100vh;
   transform: translateX(100%);
   background-color: #f9f9f9;
-  transition: ease-in-out .4s;
+  transition: ease-in-out 0.4s;
   padding: 50px 24px 80px 24px;
   @media (min-width: 768px) {
     padding: 80px 40px;
@@ -52,7 +59,6 @@ img {
     padding: 100px 80px;
   }
 }
-
 
 .header__nav__container {
   max-width: 1440px;
@@ -75,7 +81,7 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   vertical-align: middle;
-  scale: .4;
+  scale: 0.4;
   transform: rotate(180deg);
 }
 
@@ -83,14 +89,16 @@ img {
   margin-bottom: 48px;
 }
 
-.nav__item--product p, .nav__item--about p {
+.nav__item--product p,
+.nav__item--about p {
   font-family: "Khula";
   font-size: clamp(1rem, 0.629rem + 1.52vw, 2rem);
   font-weight: 600;
   margin-bottom: 20px;
 }
 
-.nav__item--product p sup, .nav__item--about p sup {
+.nav__item--product p sup,
+.nav__item--about p sup {
   font-size: clamp(0.75rem, 0.662rem + 0.38vw, 1rem);
   margin-left: 2px;
 }
@@ -161,7 +169,7 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   vertical-align: middle;
-  scale: .7;
+  scale: 0.7;
 }
 
 .nav__list-container {
@@ -191,7 +199,7 @@ img {
   width: 40px;
   height: 1px;
   background-color: #333;
-  transition: ease .4s;
+  transition: ease 0.4s;
   margin-bottom: 8px;
 }
 
@@ -208,7 +216,6 @@ img {
 .header__nav.active {
   transform: translateX(0%);
 }
-
 
 /* ローディング画面 */
 
@@ -258,7 +265,6 @@ img {
   transition: opacity 1s ease-in-out;
 }
 
-
 /* TOPページ */
 
 .main-view {
@@ -276,7 +282,7 @@ img {
 }
 
 .main-view::before {
-  content: '';
+  content: "";
   background-image: url(./image/mv_bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -307,9 +313,9 @@ img {
 
 .slider1 .swiper-slide img {
   width: 100%;
-    height: auto;
-    object-fit: cover;
-    object-position: center;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
 }
 
 .main-view__title {
@@ -326,7 +332,6 @@ img {
     margin-bottom: calc(min(103vw, 485px) / 2 + 270px);
   }
 }
-
 
 .main-view__text {
   position: absolute;
@@ -357,7 +362,7 @@ img {
   display: block;
   text-align: right;
   font-family: "khula";
-  font-size: clamp(0.625rem, 0.581rem + 0.19vw, 0.75rem); 
+  font-size: clamp(0.625rem, 0.581rem + 0.19vw, 0.75rem);
   font-weight: 300;
 }
 
@@ -373,7 +378,7 @@ img {
   margin-right: 8px;
 }
 
-.title__text-image:nth-child(2){
+.title__text-image:nth-child(2) {
   margin-left: 8px;
 }
 
@@ -397,7 +402,7 @@ img {
   font-size: clamp(0.875rem, 0.831rem + 0.19vw, 1rem);
   line-height: 2;
   @media (min-width: 768px) {
-    width: min(65% ,620px);
+    width: min(65%, 620px);
     margin-right: 0;
     margin-left: auto;
   }
@@ -409,10 +414,10 @@ img {
   height: auto;
   text-align: right;
   margin-top: 64px;
-  @media (min-width:768px) {
+  @media (min-width: 768px) {
     padding: 0 40px;
   }
-  @media (min-width:1080px) {
+  @media (min-width: 1080px) {
     padding: 0 80px;
   }
 }
@@ -433,11 +438,11 @@ img {
   display: flex;
   gap: min(4.26vw, 24px);
   align-items: end;
-  @media (min-width:768px) {
+  @media (min-width: 768px) {
     margin-top: 64px;
     padding: 0 40px;
   }
-  @media (min-width:1080px) {
+  @media (min-width: 1080px) {
     padding: 0 80px;
     margin-top: 170px;
   }
@@ -462,16 +467,16 @@ img {
 .philosophy__copy {
   align-items: center;
   display: flex;
-  overflow:hidden;
+  overflow: hidden;
   width: 100%;
-  white-space:nowrap;
+  white-space: nowrap;
   margin-top: 48px;
   text-transform: uppercase;
   z-index: 1;
-  @media (min-width:768px) {
+  @media (min-width: 768px) {
     margin-top: 64px;
   }
-  @media (min-width:1080px) {
+  @media (min-width: 1080px) {
     margin-top: 120px;
   }
 }
@@ -481,22 +486,26 @@ img {
   color: #f1f1f1;
   font-size: 3rem;
   letter-spacing: 1rem;
-  transform:translateX(100%);
+  transform: translateX(100%);
   margin: 0;
   padding: 0;
 }
 
-.philosophy__copy ul li{
+.philosophy__copy ul li {
   display: inline-block;
   padding-right: 10px;
 }
 @keyframes flowing {
-  0% { transform:translateX(0); }
-  100% { transform:translateX(-100%); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 .product {
-  background: #EFEDE9;
+  background: #efede9;
   padding: 80px 0;
   margin-top: 80px;
   @media (min-width: 1080px) {
@@ -529,7 +538,7 @@ img {
   width: 200px;
   height: auto;
   text-align: center;
-  opacity: .4;
+  opacity: 0.4;
   transition: opacity 0.3s;
 }
 
@@ -581,7 +590,8 @@ img {
   font-weight: 400;
 }
 
-.swiper-button-prev, .swiper-button-next {
+.swiper-button-prev,
+.swiper-button-next {
   position: absolute;
   top: 25%;
   width: 56px;
@@ -617,7 +627,7 @@ img {
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #7C6957;
+  background-color: #7c6957;
 }
 
 .hover-rotate {
@@ -628,7 +638,7 @@ img {
 
 .hover-rotate > span {
   backface-visibility: hidden;
-  transition: transform .3s;
+  transition: transform 0.3s;
   display: block;
   height: 20px;
 }
@@ -648,7 +658,6 @@ img {
 .hover-rotate:hover > span:last-child {
   transform: translateY(-10px) rotateX(0deg);
 }
-
 
 .about {
   max-width: 1440px;
@@ -677,7 +686,7 @@ img {
   min-height: 210px;
   height: 50.2vw;
   overflow: hidden;
-  @media (min-width:768px) {
+  @media (min-width: 768px) {
     max-height: 386px;
   }
 }
@@ -702,7 +711,8 @@ img {
 }
 
 @media (min-width: 768px) {
-  .item1, .item3 {
+  .item1,
+  .item3 {
     display: block;
   }
   .item3 {
@@ -715,10 +725,9 @@ img {
     left: 0;
   }
   .item3 {
-    right: 120px; 
+    right: 120px;
   }
 }
-
 
 .about__text-area {
   padding: 0 24px;
@@ -759,13 +768,13 @@ img {
   font-size: clamp(0.875rem, 0.831rem + 0.19vw, 1rem);
   line-height: 2;
   @media (min-width: 768px) {
-    width: min(65% ,620px);
+    width: min(65%, 620px);
     margin-right: 0;
     margin-left: auto;
   }
 }
 
-.about-link {
+.link-position {
   text-align: right;
 }
 
@@ -822,7 +831,8 @@ img {
   cursor: pointer;
 }
 
-.accordion__head p, .accordion__body p {
+.accordion__head p,
+.accordion__body p {
   display: inline-block;
   width: 240px;
   font-family: "Zen Kaku Gothic New";
@@ -833,7 +843,8 @@ img {
   }
 }
 
-.accordion__head::after, .accordion__head::before {
+.accordion__head::after,
+.accordion__head::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -842,23 +853,22 @@ img {
   width: 12px;
   height: 1px;
   background-color: #333;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .accordion__head::before {
-  transform: translateY(-50%)rotate(90deg);
+  transform: translateY(-50%) rotate(90deg);
 }
 
-
 .accordion__item.active .accordion__head::before {
-  transform: translateY(-50%)rotate(0deg);
+  transform: translateY(-50%) rotate(0deg);
 }
 
 .accordion__body {
   overflow: hidden;
   width: 100%;
   height: 0;
-  transition: all .25s ease;
+  transition: all 0.25s ease;
 }
 
 .accordion__item.active .accordion__body {
@@ -882,16 +892,16 @@ img {
   border-radius: 20px 20px 0 0;
 }
 
-#js-cursor{
+#js-cursor {
   pointer-events: none;
   position: fixed;
-  top: -15px; 
+  top: -15px;
   left: -15px;
   width: 30px;
   height: 30px;
   border: 1px solid #333;
   border-radius: 50%;
-  transform: translate(0,0);
+  transform: translate(0, 0);
   transition: width 0.3s ease-out, height 0.3s ease-out;
   z-index: 10000;
   opacity: 0;
@@ -903,7 +913,7 @@ img {
 }
 
 #js-cursor.js-hover::after {
-  content: 'GET IN TOCH';
+  content: "GET IN TOCH";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -925,7 +935,7 @@ img {
   content: "";
   display: inline-block;
   background-image: url(./image/Arrow-big.png);
-  background-repeat:  no-repeat;
+  background-repeat: no-repeat;
   background-position: center;
   width: 30px;
   height: 30px;
@@ -934,7 +944,7 @@ img {
   margin-left: 4px;
 }
 
-@media (min-width:768px) {
+@media (min-width: 768px) {
   .contact__text h2::after {
     width: 45px;
     height: 45px;
@@ -948,7 +958,7 @@ img {
   color: #333;
   margin-top: 8px;
   font-weight: 900;
-  @media (min-width:768px) {
+  @media (min-width: 768px) {
     margin-top: 16px;
   }
 }
@@ -971,11 +981,11 @@ footer {
   width: 100%;
   height: auto;
   padding: 48px 24px;
-  @media (min-width:768px) {
+  @media (min-width: 768px) {
     padding-right: 40px;
     padding-left: 40px;
   }
-  @media (min-width:1080px) {
+  @media (min-width: 1080px) {
     padding-right: 80px;
     padding-left: 80px;
   }
@@ -990,11 +1000,15 @@ footer h1 {
   margin-bottom: 40px;
 }
 
-.about__lists, .product__lists, .sns__lists {
+.about__lists,
+.product__lists,
+.sns__lists {
   margin-bottom: 40px;
 }
 
-.about__lists h2, .product__lists h2, .sns__lists h2 {
+.about__lists h2,
+.product__lists h2,
+.sns__lists h2 {
   font-family: "Khula";
   color: #fff;
   font-size: clamp(1rem, 0.912rem + 0.38vw, 1.25rem);
@@ -1004,7 +1018,9 @@ footer h1 {
   margin-bottom: 24px;
 }
 
-.about__lists li a, .product__lists li a, .sns__lists li a {
+.about__lists li a,
+.product__lists li a,
+.sns__lists li a {
   display: inline-block;
   font-family: "Zen Kaku Gothic New";
   font-size: clamp(0.875rem, 0.831rem + 0.19vw, 1rem);
@@ -1017,7 +1033,9 @@ footer h1 {
     display: flex;
     justify-content: space-between;
   }
-  .about__menu, .product__menu, .sns__menu {
+  .about__menu,
+  .product__menu,
+  .sns__menu {
     padding-right: 12vw;
   }
 }
@@ -1047,7 +1065,6 @@ footer h1 {
   padding: 9px 10px;
 }
 
-
 /* Aboutページ */
 
 .brand__story {
@@ -1072,11 +1089,11 @@ footer h1 {
 }
 
 .brand__story__title span {
-    display: block;
-    font-family: "Zen Kaku Gothic New";
-    font-size: clamp(0.75rem, 0.706rem + 0.19vw, 0.875rem);
-    font-weight: 500;
-    margin-top: 4px;
+  display: block;
+  font-family: "Zen Kaku Gothic New";
+  font-size: clamp(0.75rem, 0.706rem + 0.19vw, 0.875rem);
+  font-weight: 500;
+  margin-top: 4px;
 }
 
 .brand__story p {
@@ -1145,7 +1162,7 @@ footer h1 {
   font-weight: bold;
   letter-spacing: 2rem;
   text-indent: 2rem;
-  opacity: .05;
+  opacity: 0.05;
 }
 
 .flow__container {
@@ -1287,9 +1304,9 @@ footer h1 {
     align-items: center;
   }
   @media (min-width: 800px) {
-      margin: 0 auto;
-      max-width: 800px;
-      padding: 0;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0;
   }
 }
 
@@ -1322,8 +1339,29 @@ footer h1 {
 }
 
 .profile__photo {
+  position: relative;
+  z-index: 0;
   margin: 24px auto 0;
   width: min(50%, 240px);
+  height: 300px;
+  background-image: url(./image/Profile_photo.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.profile__photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url(./image/Profile_photo-hover.jpg);
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+
+.profile__photo:hover::after {
+  opacity: 1;
 }
 
 @media (min-width: 768px) {
@@ -1345,7 +1383,7 @@ footer h1 {
   justify-content: space-between;
   overflow: hidden;
   margin-top: 40px;
-  @media (min-width:768px) {
+  @media (min-width: 768px) {
     padding: 0 40px;
   }
   @media (min-width: 1080px) {
@@ -1374,20 +1412,18 @@ footer h1 {
   }
 }
 
-.image-wrapper--profile .product_1, 
+.image-wrapper--profile .product_1,
 .image-wrapper--profile .product_2 {
   width: min(100%, 224px);
   max-height: 350px;
 }
 
-
 /* Productページ */
 
 .product__detail {
-  /* margin-top: 100px; */
   padding: 0 24px;
   max-width: 1440px;
-  margin: 100px 0 auto 0;
+  margin: 100px auto 0;
   @media (min-width: 768px) {
     padding: 0 40px;
   }
@@ -1459,13 +1495,13 @@ footer h1 {
 
 .gallery__container {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
   @media (min-width: 768px) {
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
   @media (min-width: 1080px) {
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -1513,7 +1549,6 @@ footer h1 {
   margin-left: 24px;
 }
 
-
 /* .other-product-item::after {
   content: '→';
   font-family: "Khula";
@@ -1527,7 +1562,7 @@ footer h1 {
   .other-product-item {
     position: relative;
   }
-  
+
   .other-product-item::before {
     content: "";
     position: absolute;
@@ -1539,14 +1574,14 @@ footer h1 {
     width: 90px;
     height: 120px;
     opacity: 0;
-    transition: .4s;
+    transition: 0.4s;
   }
 
   .other-product-item:hover::before {
-    background-size: cover; 
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: .5;
+    opacity: 0.5;
   }
 
   .other-product--wicker:hover::before {
@@ -1568,8 +1603,6 @@ footer h1 {
     background-image: url(./image/product_sub/hover-coster.jpg);
   }
 }
-
-
 
 /* All Productsページ */
 
@@ -1624,7 +1657,6 @@ footer h1 {
 }
 
 .all__prducts a {
-  display: block;
   font-family: "Khula";
   font-size: clamp(0.875rem, 0.787rem + 0.38vw, 1.125rem);
   text-align: right;
@@ -1632,14 +1664,13 @@ footer h1 {
   margin-bottom: 80px;
 }
 
-
 /* 404ページ */
 
 .not-found {
   padding: 0 24px;
   max-width: 1200px;
   margin: 0 auto;
-  @media(min-width: 768px) {
+  @media (min-width: 768px) {
     padding: 0 40px;
   }
 }

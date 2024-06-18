@@ -1,205 +1,292 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css"
+    />
 
-  <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Cabin+Condensed:wght@400;500;600;700&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Cabin+Condensed:wght@400;500;600;700&family=Zen+Kaku+Gothic+New&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- FontAwespme -->
-  <script src="https://kit.fontawesome.com/bec3a3a064.js" crossorigin="anonymous"></script>
+    <!-- FontAwespme -->
+    <script
+      src="https://kit.fontawesome.com/bec3a3a064.js"
+      crossorigin="anonymous"
+    ></script>
 
-  <!-- Swiper -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
-  
-  <!-- GSAP -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  
-  <link rel="stylesheet" href="style.css">
-  <script src="cover.js" defer></script>
-  <script src="main.js" defer></script>
-  <title>FURYU | Pot Cover</title>
-</head>
-<body>
-  <header class="header">
-    <nav id="js-nav" class="header__nav">
-      <div class="header__nav__container">
-        <ul class="nav__lists">
-          <li class="nav__item--home"><a href="./index.html">HOME</a></li>
-          <li class="nav__item--product">
-            <p>Product<sup>6</sup></p>
-            <ul class="nav__product-items">
-              <li><a href="./product(wicker).html">
-                <figure>
-                  <img src="./image/all_sub/wicker-1.jpg" alt="">
-                  <figcaption>編みかごバック</figcaption>
-                </figure>
-              </a></li>
-              <li><a href="./product(basket).html">
-                <figure>
-                  <img src="./image/all_sub/basket.jpg" alt="">
-                  <figcaption>バスケット</figcaption>
-                </figure>
-              </a></li>
-              <li><a href="./product(cover).html">
-                <figure>
-                  <img src="./image/all_sub/cover-1.jpg" alt="">
-                  <figcaption>鉢カバー</figcaption>
-                </figure>
-              </a></li>
-              <li><a href="./product(shade).html">
-                <figure>
-                  <img src="./image/all_sub/shade.jpg" alt="">
-                  <figcaption>ランタンシェード</figcaption>
-                </figure>
-              </a></li>
-              <li><a href="./product(case).html">
-                <figure>
-                  <img src="./image/all_sub/case-1.jpg" alt="">
-                  <figcaption>小物入れ</figcaption>
-                </figure>
-              </a></li>
-              <li><a href="./product(coster).html">
-                <figure>
-                  <img src="./image/all_sub/coster-1.jpg" alt="">
-                  <figcaption>コースター</figcaption>
-                </figure>
-              </a></li>
-            </ul>
-            <a class="nav__product__all-links" href="./allProduct.html">View All Products</a>
-          </li>
-          <li class="nav__item--about">
-            <p>About</p>
-            <ul>
-              <li><a href="./about.html#brand">Brand story</a></li>
-              <li><a href="./about.html#profile">Profile</a></li>
-            </ul>
-          </li>
-          <li class="nav__item--contact"><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
-    <button id="js-hamburger-button" class="header__hamburger-button">
-      <div></div>
-      <div></div>
-    </button>
-  </header>
-  <main>
-    <!-- Product Detail -->
-    <section class="product__detail">
-      <h1>鉢カバー<small>/Pot Cover</small></h1>
-      <figure class="product__detail-container">
-        <img id="coverImage" src="./image/product_sub/cover/product_potCover_1.jpg" alt="タイプ1の鉢カバー">
-        <figcaption>
-          <p class="product__detail-text">手編みの鉢カバーが、お部屋の観葉植物を優しく包み込みます。<br>ナチュラルな素材の風合いが、植物と調和してインテリアのアクセントに。</p>
-          <div class="select--type">
-            <p>Type</p>
-            <div class="number-wrapper">
-              <button class="select-button show" href="">01</button>
-              <button class="select-button" href="">02</button>
-              <!--<button class="select-button" href="">03</button>
-              <button class="select-button" href="">04</button> -->
+    <!-- Swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="cover.js" defer></script>
+    <script src="main.js" defer></script>
+    <title>FURYU | Pot Cover</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav id="js-nav" class="header__nav">
+        <div class="header__nav__container">
+          <ul class="nav__lists">
+            <li class="nav__item--home"><a href="./index.html">HOME</a></li>
+            <li class="nav__item--product">
+              <p>Product<sup>6</sup></p>
+              <ul class="nav__product-items">
+                <li>
+                  <a href="./product(wicker).html">
+                    <figure>
+                      <img src="./image/all_sub/wicker-1.jpg" alt="" />
+                      <figcaption>編みかごバック</figcaption>
+                    </figure>
+                  </a>
+                </li>
+                <li>
+                  <a href="./product(basket).html">
+                    <figure>
+                      <img src="./image/all_sub/basket.jpg" alt="" />
+                      <figcaption>バスケット</figcaption>
+                    </figure>
+                  </a>
+                </li>
+                <li>
+                  <a href="./product(cover).html">
+                    <figure>
+                      <img src="./image/all_sub/cover-1.jpg" alt="" />
+                      <figcaption>鉢カバー</figcaption>
+                    </figure>
+                  </a>
+                </li>
+                <li>
+                  <a href="./product(shade).html">
+                    <figure>
+                      <img src="./image/all_sub/shade.jpg" alt="" />
+                      <figcaption>ランタンシェード</figcaption>
+                    </figure>
+                  </a>
+                </li>
+                <li>
+                  <a href="./product(case).html">
+                    <figure>
+                      <img src="./image/all_sub/case-1.jpg" alt="" />
+                      <figcaption>小物入れ</figcaption>
+                    </figure>
+                  </a>
+                </li>
+                <li>
+                  <a href="./product(coster).html">
+                    <figure>
+                      <img src="./image/all_sub/coster-1.jpg" alt="" />
+                      <figcaption>コースター</figcaption>
+                    </figure>
+                  </a>
+                </li>
+              </ul>
+              <a class="nav__product__all-links" href="./allProduct.html"
+                >View All Products</a
+              >
+            </li>
+            <div class="nav__list-container">
+              <li class="nav__item--about">
+                <p>About</p>
+                <ul>
+                  <li><a href="./about.html#brand">Brand story</a></li>
+                  <li><a href="./about.html#profile">Profile</a></li>
+                </ul>
+              </li>
+              <li class="nav__item--contact">
+                <a
+                  href="https://docs.google.com/forms/d/157Drncnud1MTIrhD1qelvMpe9uEPrKHKZryZ185ytUY/viewform?edit_requested=true"
+                  >Contact</a
+                >
+              </li>
             </div>
-          </div>
-        </figcaption>
-      </figure>
-      <h2>Gallery</h2>
-      <div class="gallery__container">
-        <figure class="gallery__image"><img src="./image/product_sub/cover/cover_gallery-1.jpg" alt=""></figure>
-        <figure class="gallery__image"><img src="./image/product_sub/cover/cover_gallery-2.jpg" alt=""></figure>
-        <!-- <figure class="gallery__image"><img src="./image/product_sub/cover/cover_gallery-3.jpg" alt=""></figure> -->
-        <figure class="gallery__image"><img src="./image/product_sub/cover/cover_gallery-4.jpg" alt=""></figure>
-        <figure class="gallery__image"><img src="./image/product_sub/cover/cover_gallery-5.jpg" alt=""></figure>
-        <!-- <figure class="gallery__image"><img src="./image/product_sub/cover/cover_gallery-6.jpg" alt=""></figure> -->
-        
-      </div>
-    </section>
-
-    <!-- Flow -->
-    <section class="flow__section">
-      <div class="bg__text">
-        <p>FURYU</p>
-      </div>
-      <div class="flow__container">
-        <div class="sticky-header">
-          <h2 class="flow__title">作成までの流れ</h2>
+          </ul>
         </div>
-        <div class="flow__contents">
-          <ul class="flow__lists">
-            <li>
-              <small>(01)</small>
-              <h3>ご依頼</h3>
-              <p>Google Formで、受け付けております。<br>
-                その際、予めどんなものをオーダーメイド作成して欲しいかをお伝えいただけると幸いです。ご依頼内容をもとに、ヒアリングへと移らせていただきます。</p>
+      </nav>
+      <button id="js-hamburger-button" class="header__hamburger-button">
+        <div></div>
+        <div></div>
+      </button>
+    </header>
+    <main>
+      <!-- Product Detail -->
+      <section class="product__detail">
+        <h1>鉢カバー<small>/Pot Cover</small></h1>
+        <figure class="product__detail-container">
+          <img
+            id="coverImage"
+            src="./image/product_sub/cover/product_potCover_1.jpg"
+            alt="タイプ1の鉢カバー"
+          />
+          <figcaption>
+            <p class="product__detail-text">
+              手編みの鉢カバーが、お部屋の観葉植物を優しく包み込みます。<br />ナチュラルな素材の風合いが、植物と調和してインテリアのアクセントに。
+            </p>
+            <div class="select--type">
+              <p>Type</p>
+              <div class="number-wrapper">
+                <button class="select-button show" href="">01</button>
+                <button class="select-button" href="">02</button>
+                <!--<button class="select-button" href="">03</button>
+              <button class="select-button" href="">04</button> -->
+              </div>
+            </div>
+          </figcaption>
+        </figure>
+        <h2>Gallery</h2>
+        <div class="gallery__container">
+          <figure class="gallery__image">
+            <img src="./image/product_sub/cover/cover_gallery-1.jpg" alt="" />
+          </figure>
+          <figure class="gallery__image">
+            <img src="./image/product_sub/cover/cover_gallery-2.jpg" alt="" />
+          </figure>
+          <!-- <figure class="gallery__image"><img src="./image/product_sub/cover/cover_gallery-3.jpg" alt=""></figure> -->
+          <figure class="gallery__image">
+            <img src="./image/product_sub/cover/cover_gallery-4.jpg" alt="" />
+          </figure>
+          <figure class="gallery__image">
+            <img src="./image/product_sub/cover/cover_gallery-5.jpg" alt="" />
+          </figure>
+          <!-- <figure class="gallery__image"><img src="./image/product_sub/cover/cover_gallery-6.jpg" alt=""></figure> -->
+        </div>
+      </section>
+
+      <!-- Flow -->
+      <section class="flow__section">
+        <div class="bg__text">
+          <p>FURYU</p>
+        </div>
+        <div class="flow__container">
+          <div class="sticky-header">
+            <h2 class="flow__title">作成までの流れ</h2>
+          </div>
+          <div class="flow__contents">
+            <ul class="flow__lists">
+              <li>
+                <small>(01)</small>
+                <h3>ご依頼</h3>
+                <p>
+                  Google Formで、受け付けております。<br />
+                  その際、予めどんなものをオーダーメイド作成して欲しいかをお伝えいただけると幸いです。ご依頼内容をもとに、ヒアリングへと移らせていただきます。
+                </p>
+              </li>
+              <li>
+                <small>(02)</small>
+                <h3>ヒアリング</h3>
+                <p>
+                  お問い合わせをもとに初めはビデオ通話にてヒアリングを行います。<br />
+                  希望する商品の色味や編み方、用途、費用など細かい打ち合わせを行い、必要に応じてラフ案の作成へと進みます。<br />
+                  <small class="caution"
+                    >※ヒアリング以降のやりとりはテキストチャット(XまたはInstagram)での対応となります。</small
+                  ><br />
+                  <small class="caution-2"
+                    >※ヒアリング後、ご不明な点や伝え忘れなどございましたら、ご連絡ください。</small
+                  >
+                </p>
+              </li>
+              <li>
+                <small>(03)</small>
+                <h3>作成</h3>
+                <p>
+                  打ち合わせが完了次第、作成へと進みます。<br />
+                  作成期間はヒアリング時にお伝えしますが、目安としてコースターや小物入れで1〜2週間、バックで1ヶ月ほどとなります。<br />
+                  <small class="caution"
+                    >※依頼状況によって変動いたします。</small
+                  ><br />
+                  <small class="caution-2"
+                    >※ラフ確認からの色や形、編み方など大幅な変更及びキャンセルは進行状況によっては対応出来かねますのでご了承ください。</small
+                  >
+                </p>
+              </li>
+              <li>
+                <small>(04)</small>
+                <h3>納品</h3>
+                <p>
+                  納品
+                  作成完了後、チャットにて商品写真を送ります(引きと寄りで撮影)。<br />
+                  商品に問題がなければ、発送へと移らせていただきます。<br />
+                  <small class="caution"
+                    >※商品は着払いになりますので、受け取り可能な日時をお知らせ頂きますようお願いします。</small
+                  ><br />
+                  <small class="caution-2"
+                    >※いかなる場合も返金対応は出来かねますので、予めご了承ください。</small
+                  >
+                </p>
+              </li>
+            </ul>
+            <figure class="flow__image">
+              <img
+                src="./image/about_sub/flow_image.jpg"
+                alt="商品を作成している写真"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Other Product -->
+      <section class="other-product">
+        <h2>Other Products</h2>
+        <div class="other-product__lists">
+          <ul>
+            <li class="other-product-item other-product--wicker">
+              <a href="./product(wicker).html"
+                >編みかごバック<small>/Wicker Bag</small></a
+              >
             </li>
-            <li>
-              <small>(02)</small>
-              <h3>ヒアリング</h3>
-              <p>お問い合わせをもとに初めはビデオ通話にてヒアリングを行います。<br>
-                希望する商品の色味や編み方、用途、費用など細かい打ち合わせを行い、必要に応じてラフ案の作成へと進みます。<br>
-                <small class="caution">※ヒアリング以降のやりとりはテキストチャット(XまたはInstagram)での対応となります。</small><br>
-                <small class="caution-2">※ヒアリング後、ご不明な点や伝え忘れなどございましたら、ご連絡ください。</small></p>
+            <li class="other-product-item other-product--basket">
+              <a href="./product(basket).html"
+                >バスケット<small>/Basket</small></a
+              >
             </li>
-            <li>
-              <small>(03)</small>
-              <h3>作成</h3>
-              <p>打ち合わせが完了次第、作成へと進みます。<br>
-                作成期間はヒアリング時にお伝えしますが、目安としてコースターや小物入れで1〜2週間、バックで1ヶ月ほどとなります。<br>
-                <small class="caution">※依頼状況によって変動いたします。</small><br>
-                <small class="caution-2">※ラフ確認からの色や形、編み方など大幅な変更及びキャンセルは進行状況によっては対応出来かねますのでご了承ください。</small></p>
+            <li class="other-product-item other-product--shade">
+              <a href="./product(shade).html"
+                >ランタンシェード<small>/Lamp Shade</small></a
+              >
             </li>
-            <li>
-              <small>(04)</small>
-              <h3>納品</h3>
-              <p>納品
-                作成完了後、チャットにて商品写真を送ります(引きと寄りで撮影)。<br>
-                商品に問題がなければ、発送へと移らせていただきます。<br>
-                <small class="caution">※商品は着払いになりますので、受け取り可能な日時をお知らせ頂きますようお願いします。</small><br>
-                <small class="caution-2">※いかなる場合も返金対応は出来かねますので、予めご了承ください。</small></p>
+            <li class="other-product-item other-product--case">
+              <a href="./product(case).html"
+                >小物入れ<small>/Accessory Case</small></a
+              >
+            </li>
+            <li class="other-product-item other-product--coster">
+              <a href="./product(coster).html"
+                >コースター<small>/Coster</small></a
+              >
             </li>
           </ul>
-          <figure class="flow__image"><img src="./image/about_sub/flow_image.jpg" alt="商品を作成している写真"></figure>
-        </div>    
-      </div>
-    </section>
+        </div>
+      </section>
 
-
-    <!-- Other Product -->
-    <section class="other-product">
-      <h2>Other Products</h2>
-      <div class="other-product__lists">
-        <ul>
-          <li class="other-product-item other-product--wicker">
-            <a href="./product(wicker).html">編みかごバック<small>/Wicker Bag</small></a>
-          </li>
-          <li class="other-product-item other-product--basket">
-            <a href="./product(basket).html">バスケット<small>/Basket</small></a>
-          </li>
-          <li class="other-product-item other-product--shade">
-            <a href="./product(shade).html">ランタンシェード<small>/Lamp Shade</small></a>
-          </li>
-          <li class="other-product-item other-product--case">
-            <a href="./product(case).html">小物入れ<small>/Accessory Case</small></a>
-          </li>
-          <li class="other-product-item other-product--coster">
-            <a href="./product(coster).html">コースター<small>/Coster</small></a>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <div id="js-cursor"></div>
-    <section class="contact__area js-area">
-        <a href="#" class="contact-form" target="_blank">
+      <!-- Contact -->
+      <div id="js-cursor"></div>
+      <section class="contact__area js-area">
+        <a
+          href="https://docs.google.com/forms/d/157Drncnud1MTIrhD1qelvMpe9uEPrKHKZryZ185ytUY/viewform?edit_requested=true"
+          class="contact-form"
+          target="_blank"
+        >
           <div class="contact__text">
             <h2>Contact us</h2>
             <p>作成のご相談はこちらから</p>
@@ -207,42 +294,90 @@
             <small>※SNSからのお問い合わせも可能です</small>
           </div>
         </a>
-    </section>
-  </main>
+      </section>
+    </main>
 
-  <footer>
-    <h1>FURYU</h1>
-    <div class="footer__links">
-      <div class="about__lists">
-        <h2>About</h2>
-        <ul class="about__menu">
-          <li><a href="./about.html#brand">Brand Story</a></li>
-          <li><a href="./about.html#profile">Profile</a></li>
-        </ul>
+    <footer>
+      <h1>FURYU</h1>
+      <div class="footer__links">
+        <div class="about__lists">
+          <h2>About</h2>
+          <ul class="about__menu">
+            <li>
+              <a href="./about.html#brand" class="hover-rotate">
+                <span>Brand Story</span>
+                <span>Brand Story</span>
+              </a>
+            </li>
+            <li>
+              <a href="./about.html#profile" class="hover-rotate">
+                <span>Profile</span>
+                <span>Profile</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="product__lists">
+          <h2>Product</h2>
+          <ul class="product__menu">
+            <div class="product__menu--1">
+              <li>
+                <a href="./product(wicker).html" class="hover-rotate">
+                  <span>編みかごバック</span>
+                  <span>編みかごバック</span>
+                </a>
+              </li>
+              <li>
+                <a href="./product(basket).html" class="hover-rotate">
+                  <span>バスケット</span>
+                  <span>バスケット</span>
+                </a>
+              </li>
+              <li>
+                <a href="./product(cover).html" class="hover-rotate">
+                  <span>鉢カバー</span>
+                  <span>鉢カバー</span>
+                </a>
+              </li>
+            </div>
+            <div class="product__menu--2">
+              <li>
+                <a href="./product(shade).html" class="hover-rotate">
+                  <span>ランタンシェード</span>
+                  <span>ランタンシェード</span>
+                </a>
+              </li>
+              <li>
+                <a href="./product(case).html" class="hover-rotate">
+                  <span>小物入れ</span>
+                  <span>小物入れ</span>
+                </a>
+              </li>
+              <li>
+                <a href="./product(coster).html" class="hover-rotate">
+                  <span>コースター</span>
+                  <span>コースター</span>
+                </a>
+              </li>
+            </div>
+          </ul>
+        </div>
+        <div class="sns__lists">
+          <h2>SNS</h2>
+          <ul class="sns__menu">
+            <li>
+              <a href="#" target="_blank"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" target="_blank"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div class="product__lists">
-        <h2>Product</h2>
-        <ul class="product__menu">
-          <div class="product__menu--1">
-            <li><a href="./product(wicker).html">編みかごバック</a></li>
-            <li><a href="./product(basket).html">バスケット</a></li>
-            <li><a href="./product(cover).html">鉢カバー</a></li>
-          </div>
-          <div class="product__menu--2">
-            <li><a href="./product(shade).html">ランタンシェード</a></li>
-            <li><a href="./product(case).html">小物入れ</a></li>
-            <li><a href="./product(coster).html">コースター</a></li>
-          </div>
-        </ul>
-      </div>
-      <div class="sns__lists">
-        <h2>SNS</h2>
-        <ul class="sns__menu">
-          <li><a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
-          <li><a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-        </ul>
-      </div>
-    </div>
-  </footer>
-</body>
+    </footer>
+  </body>
 </html>
